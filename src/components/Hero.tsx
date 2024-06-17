@@ -1,6 +1,7 @@
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Avatar from './Avatar'
+import Image from 'next/image'
 
 const Hero = () => {
     const router = useRouter()
@@ -8,7 +9,7 @@ const Hero = () => {
         <div>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src="img.png" alt='img' className="max-w-lg w-1/2 rounded-lg shadow-2xl" />
+                    <Image src="img.png" alt='img' className="max-w-lg w-1/2 rounded-lg shadow-2xl" />
                     <div>
                         <div>
                             <div className=" text-5xl font-extrabold">Grow Your Startups, in

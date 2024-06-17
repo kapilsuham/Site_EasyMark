@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const TestimonialOne = () => {
@@ -17,7 +18,7 @@ const TestimonialOne = () => {
                     <div>
                         <div className="avatar mt-5 gap-3">
                             <div className="w-16 h-16 rounded-full">
-                                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                <Image alt="image" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                             </div>
                             <div><div className='text-primary-content'>ShipForever Customer</div>
                                 <div>28.5k followers on <svg className='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="18" color="#white" fill="none">

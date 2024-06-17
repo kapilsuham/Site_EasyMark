@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Me = () => {
     return (
         <div className='container m-auto mt-32 w-4/5 lg:w-1/2 text-secondary'>
             <div className='container justify-center lg:flex lg:gap-5'>
-                <div className='lg:w-4/5'><img src="" alt="img" /></div>
+                <div className='lg:w-4/5'><Image src="" alt="img" /></div>
 
                 <div ><div className='text-primary-content'>Hey, It's Kapil</div>
                     <div>In 2021, I built a many startup for more than a years, and spend hours in writing repititive line of code again and again.

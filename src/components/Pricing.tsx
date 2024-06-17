@@ -1,6 +1,7 @@
 import React from 'react'
 import {plan} from '@/(more)/ConfigApp'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 const Pricing = () => {
     // console.log(typeof(plan));
     const router = useRouter()
@@ -28,14 +29,14 @@ const Pricing = () => {
                                {i?.access?.map(i=>(
                                 <ul>
                                     <li className="mb-2 flex items-center">
-                                        <span className='w-10'><img src="tick.svg" alt="" /></span>
+                                        <span className='w-10'><Image src="tick.svg" alt="image" /></span>
                                         <span className="ml-2 text-xl ">{i}</span>
                                     </li>
                                 </ul>))}
                                 {i?.denied?.map(i=>(
                                 <ul>
                                     <li className="mb-2 flex items-center">
-                                        <span className='w-10'><img src="cancel.svg" alt="" /></span>
+                                        <span className='w-10'><Image src="cancel.svg" alt="image" /></span>
                                         <span className="ml-2 text-xl ">{i}</span>
                                     </li>
                                 </ul>))}

@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import React, { useState } from 'react'
 const Sidebar = () => {
     const [ham,setham]=useState(true)
@@ -21,7 +22,7 @@ const Sidebar = () => {
             <div className={`${ham?("-ml-96"):("")} lg:ml-0`}>
             <aside className="flex h-screen fixed w-full lg:w-1/6 flex-col main overflow-y-auto border-r bg-neutral border-neutral px-2 py-5">
                 <div className='flex'>
-                    <img src="logo.svg" alt="logo" />
+                    <Image src="logo.svg" alt="logo" />
 
                     <div className='mt-2 text-xl font-semibold'>ShipForever</div>
                 </div>

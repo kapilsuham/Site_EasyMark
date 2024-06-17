@@ -1,5 +1,6 @@
 import { User } from 'next-auth'
 import { useSession } from 'next-auth/react'
+import Image from 'next/image'
 
 const ProfileDrawer = () => {
   const { data: session } = useSession()
@@ -19,8 +20,8 @@ const ProfileDrawer = () => {
           <div className='p-5 text-center flex-col'>
             <div className="avatar ">
               <div className="w-24 rounded-full">
-                {user.image?( <img src={user.image} alt='img' />):
-                (  <img src='https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg' alt='img' />)
+                {user.image?( <Image src={user.image} alt='img' />):
+                (  <Image src='https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg' alt='img' />)
                 }
               </div>
             </div>

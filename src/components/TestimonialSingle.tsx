@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const TestimonialSingle = () => {
@@ -5,7 +6,7 @@ const TestimonialSingle = () => {
 <div>
 <div className="lg:hero min-h-screen p-4 mt-20 m-auto bg-base-200">
   <div className="hero-content lg:w-4/5 flex-col lg:flex-row">
-    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+    <Image alt="image" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" className="max-w-sm rounded-lg shadow-2xl" />
     <div >
       <p className="py-6">ShipForever made my life and made my startups earn in $ within 2 days. Buying the best ShipForever Gold plan is the best decission which i mad in my life.Thank you to team of ShipForever for every feature you provide & thank you for everything. </p>
     <div className='text-primary-content'>ShipForever Customer</div>

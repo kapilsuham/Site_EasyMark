@@ -3,6 +3,7 @@ import axios from "axios";
 import Loader from "./Loader";
 import { useState } from "react";
 import { signOut } from "next-auth/react";
+import Image from "next/image";
 
 export default function CheckoutButton(data:any) {
   
@@ -33,7 +34,7 @@ export default function CheckoutButton(data:any) {
   return (
     <>
 
-      <button className="btn btn-wide" disabled={isSubmitting} onClick={() => buyProduct(data)} >{isSubmitting ? (<div className='btn btn-wide bg-yellow-500'><Loader /></div>) : (<div className='btn hover:bg-yellow-300 btn-wide bg-yellow-500 text-success-content'> <img className='w-8' src="logopng.png" alt="" />Get ShipForever</div>)}</button>
+      <button className="btn btn-wide" disabled={isSubmitting} onClick={() => buyProduct(data)} >{isSubmitting ? (<div className='btn btn-wide bg-yellow-500'><Loader /></div>) : (<div className='btn hover:bg-yellow-300 btn-wide bg-yellow-500 text-success-content'> <Image className='w-8' src="logopng.png" alt="image" />Get ShipForever</div>)}</button>
 
     </>
 

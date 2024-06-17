@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 import ThemeController from './ThemeController'
 import ProfileDrawer from './ProfileDrawer'
+import Image from 'next/image'
 
 const Navbar = () => {
   const { data: session } = useSession()
@@ -14,7 +15,7 @@ const Navbar = () => {
     <div>
       <div className="navbar bg-base-100">
         <div className="flex-1">
-          <a href='/' className="btn btn-ghost text-secondary lg:text-xl"><img src="logo.svg" alt="img" />ShipForever</a>
+          <a href='/' className="btn btn-ghost text-secondary lg:text-xl"><Image src="logo.svg" alt="img" />ShipForever</a>
         </div>
         <div >
           <div className='hidden lg:flex'> <ThemeController/></div>
