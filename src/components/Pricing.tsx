@@ -6,7 +6,7 @@ const Pricing = () => {
     // console.log(typeof(plan));
     const router = useRouter()
     return (
-        <div className='mt-32 bg-secondary-content'>
+        <div className='pt-28 p-3 bg-secondary-content'>
             <div>
                 <div className='text-yellow-400 text-2xl lg:text-5xl font-extrabold text-center mb-5'>Pricing</div>
                 <div className="mx-auto mb-12 max-w-2xl text-center lg:max-w-5xl">
@@ -29,14 +29,14 @@ const Pricing = () => {
                                {i?.access?.map(i=>(
                                 <ul key={i.id}>
                                     <li className="mb-2 flex items-center">
-                                        <span className='w-10'><Image src="tick.svg" alt="image" /></span>
+                                        <span className='w-10'><Image width={32} height={32} src="/tick.svg" alt="image" /></span>
                                         <span className="ml-2 text-xl ">{i.tag}</span>
                                     </li>
                                 </ul>))}
                                 {i?.denied?.map(i=>(
                                 <ul key={i.id}>
                                     <li className="mb-2 flex items-center">
-                                        <span className='w-10'><Image src="cancel.svg" alt="image" /></span>
+                                        <span className='w-10'><Image width={32} height={32} src="/cancel.svg" alt="image" /></span>
                                         <span className="ml-2 text-xl ">{i.tag}</span>
                                     </li>
                                 </ul>))}

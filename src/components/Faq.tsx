@@ -7,7 +7,7 @@ const Faq = () => {
         Frequently Asked Questions</div>
         <div className='lg:w-1/2'>
             <div className="collapse  collapse-plus bg-base-200">
-                <input type="radio" name="my-Faq-3" defaultChecked />
+                <input type="radio" name="my-Faq-3"  defaultChecked  readOnly />
                 <div className="collapse-title text-xl font-medium">
                     Click to open this one and close others
                 </div>

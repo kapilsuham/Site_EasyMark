@@ -22,14 +22,14 @@ const Sidebar = () => {
             <div className={`${ham?("-ml-96"):("")} lg:ml-0`}>
             <aside className="flex h-screen fixed w-full lg:w-1/6 flex-col main overflow-y-auto border-r bg-neutral border-neutral px-2 py-5">
                 <div className='flex'>
-                    <Image src="logo.svg" alt="logo" />
+                    <Image className='w-auto h-auto' width={62} height={62} src="logo.svg" alt="logo" />
 
                     <div className='mt-2 text-xl font-semibold'>ShipForever</div>
                 </div>
 
                 <div className="justify-center mt-5">
                     <div role="tablist" className="tabs tabs-lifted">
-                        <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="App" defaultChecked />
+                        <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="App" defaultChecked  readOnly />
                         <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
                             <a className='ml-5' href="/">Get Started</a>
                             <div className='text-secondary mt-5'>Tutorials</div>

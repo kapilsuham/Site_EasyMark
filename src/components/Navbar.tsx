@@ -12,10 +12,9 @@ const Navbar = () => {
   const user: User = session?.user as User
   const router = useRouter()
   return (
-    <div>
       <div className="navbar bg-base-100">
         <div className="flex-1">
-          <a href='/' className="btn btn-ghost text-secondary lg:text-xl"><Image src="logo.svg" alt="img" />ShipForever</a>
+          <a href='/' className="btn btn-ghost w-auto h-auto text-secondary lg:text-xl"><Image width={62} height={62} src="logo.svg" alt="img" />ShipForever</a>
         </div>
         <div >
           <div className='hidden lg:flex'> <ThemeController/></div>
@@ -41,7 +40,6 @@ const Navbar = () => {
             </div>) : (<div className='mt-1'><button className="btn btn-active lg:mr-10" onClick={() => router.push("/sign-in")}>LogIn</button></div>)}</div>
         </div>
         <div>
-        </div>
         </div>
         </div>
   )

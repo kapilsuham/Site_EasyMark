@@ -34,7 +34,7 @@ export default function CheckoutButton(data:any) {
   return (
     <>
 
-      <button className="btn btn-wide" disabled={isSubmitting} onClick={() => buyProduct(data)} >{isSubmitting ? (<div className='btn btn-wide bg-yellow-500'><Loader /></div>) : (<div className='btn hover:bg-yellow-300 btn-wide bg-yellow-500 text-success-content'> <Image className='w-8' src="logopng.png" alt="image" />Get ShipForever</div>)}</button>
+      <button className="btn btn-wide" disabled={isSubmitting} onClick={() => buyProduct(data)} >{isSubmitting ? (<div className='btn btn-wide bg-yellow-500'><Loader /></div>) : (<div className='btn hover:bg-yellow-300 btn-wide bg-yellow-500 text-success-content'> <Image width={32} height={32} src="/logopng.png" alt="image" />Get ShipForever</div>)}</button>
 
     </>
 

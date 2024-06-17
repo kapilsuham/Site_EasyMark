@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
         <footer className="footer p-10 bg-base-200 mt-20 text-base-content">
   <aside>
-    <Image src="logo.svg" alt="image" />
+    <Image className='w-auto h-auto' width={62} height={62} src="logo.svg" alt="image" />
     <p className='text-primary-content'>ShipForever<br/>Grow more Ship in minutes. Ship Now!</p>
     <div> &copy; Copyright 2024. All Rights Reserved by Shipforever.</div>
   </aside> 

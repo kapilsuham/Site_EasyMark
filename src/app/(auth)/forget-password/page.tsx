@@ -39,7 +39,7 @@ const Page = () => {
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
             <div role="tablist" className="tabs tabs-bordered">
-              <input type="radio" name="my_tabs_1" role="tab" className="tab px-10" aria-label="Username" defaultChecked/>
+              <input type="radio" name="my_tabs_1" role="tab" className="tab px-10" aria-label="Username" defaultChecked  readOnly />
               <div role="tabpanel" className="tab-content py-10">
                 <div className="form-control">
                 

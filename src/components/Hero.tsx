@@ -9,7 +9,7 @@ const Hero = () => {
         <div>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <Image src="img.png" alt='img' className="max-w-lg w-1/2 rounded-lg shadow-2xl" />
+                    <Image src="/img.png" alt='img' width={496} height={346} className="rounded-lg shadow-2xl" />
                     <div>
                         <div>
                             <div className=" text-5xl font-extrabold">Grow Your Startups, in
@@ -28,7 +28,7 @@ const Hero = () => {
                                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked  readOnly />
                                     </div>
                                     <div>Developers review</div>
                                 </div>
