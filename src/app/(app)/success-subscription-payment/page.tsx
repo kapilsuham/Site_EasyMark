@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
 <div className="hero min-h-screen bg-base-200">
   <div className="hero-content text-center">
@@ -14,4 +14,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

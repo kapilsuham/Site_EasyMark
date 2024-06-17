@@ -9,7 +9,7 @@ import { signIn, useSession } from "next-auth/react"
 import { toast } from "sonner"
 import Loader from "@/components/Loader"
 
-const page = () => {
+const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
   const form = useForm<z.infer<typeof signInSchema>>({
@@ -115,4 +115,4 @@ const page = () => {
 
 }
 
-export default page
+export default Page

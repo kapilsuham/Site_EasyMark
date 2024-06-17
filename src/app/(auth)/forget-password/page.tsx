@@ -7,7 +7,7 @@ import { ApiResponse } from "@/(more)/types/ApiResponse"
 import { toast } from "sonner"
 import Loader from "@/components/Loader"
 
-const page = () => {
+const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
   const form = useForm()
@@ -73,4 +73,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

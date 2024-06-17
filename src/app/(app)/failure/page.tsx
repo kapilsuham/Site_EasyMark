@@ -1,5 +1,5 @@
 'use client'
-const page = () => {
+const Page = () => {
   return (
     <div className='flex justify-center items-center text-center'>
     You have no access. Payment is not done yet
@@ -7,4 +7,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

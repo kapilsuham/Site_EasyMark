@@ -27,17 +27,17 @@ const Pricing = () => {
                               </span>       
                             <div className="mt-7 border-t text-white border-gray-100 pt-5">
                                {i?.access?.map(i=>(
-                                <ul>
+                                <ul key={i.id}>
                                     <li className="mb-2 flex items-center">
                                         <span className='w-10'><Image src="tick.svg" alt="image" /></span>
-                                        <span className="ml-2 text-xl ">{i}</span>
+                                        <span className="ml-2 text-xl ">{i.tag}</span>
                                     </li>
                                 </ul>))}
                                 {i?.denied?.map(i=>(
-                                <ul>
+                                <ul key={i.id}>
                                     <li className="mb-2 flex items-center">
                                         <span className='w-10'><Image src="cancel.svg" alt="image" /></span>
-                                        <span className="ml-2 text-xl ">{i}</span>
+                                        <span className="ml-2 text-xl ">{i.tag}</span>
                                     </li>
                                 </ul>))}
 

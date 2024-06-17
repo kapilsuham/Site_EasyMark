@@ -3,7 +3,7 @@ import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
-const page = () => {
+const Page = () => {
   
   const { data: session } = useSession()
   const user = session?.user
@@ -25,4 +25,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
