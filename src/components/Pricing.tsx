@@ -17,7 +17,7 @@ const Pricing = () => {
             </div>
             <div className='flex justify-center flex-wrap gap-2'>
                 {plan?.map(i =>
-                    <div className="card w-96 bg-base-100 mb-5 shadow-xl">
+                    <div key={i?.id} className="card w-96 bg-base-100 mb-5 shadow-xl">
                         {i.popular?(<div className='m-auto w-1/3 font-extrabold border-yellow-400 border-4 rounded-lg text-center'>Popular</div>):(<div className='mt-8'></div>)}
                         <div className="card-body">
                             <span className="mb-2 block pt-6 text-4xl font-extrabold text-yellow-400">{i?.name}</span>
