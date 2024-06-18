@@ -42,7 +42,7 @@ const Page = () => {
       identifier: data.identifier,
       password: data.password
     })
-    console.log(result);
+    // console.log(result);
     if (result?.error) {
       if (result.error == 'CredentailsSignin') {
         toast('Login failed')
@@ -106,9 +106,6 @@ const Page = () => {
         </div>
       </div>
     </div>
-
-
-
   )
 
 

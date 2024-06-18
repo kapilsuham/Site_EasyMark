@@ -6,7 +6,6 @@ const ProfileDrawer = () => {
   const { data: session } = useSession()
   const user: User = session?.user as User 
   return (
-
     <div className="drawer z-50 drawer-end">
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
