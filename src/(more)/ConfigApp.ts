@@ -23,9 +23,10 @@ export const plan = [
             { id: 4, tag: 'Google Oauth' },
             { id: 5, tag: 'SEO for ranking' }],
         popular: false,
-        cuttedPrice: 139,
-        price: 99,
-        purchaseUrl: '/payment'
+        cuttedPrice: 179,
+        price: 139,
+        mode: 'onetime', //can set to subscription
+        productId:''
     },
     {
         id: 2,
@@ -43,9 +44,10 @@ export const plan = [
             { id: 10, tag: 'SEO for ranking' }],
         denied: [],
         popular: true,
-        cuttedPrice: 0,
-        price: 3000,
-        purchaseUrl: '/payment'
+        cuttedPrice: 199,
+        price: 169,
+        mode: 'onetime',
+        productId: ''
     },
     {
         id: 3,
@@ -64,8 +66,9 @@ export const plan = [
             { id: 2, tag: 'Google Oauth' },
             { id: 3, tag: 'SEO for ranking' }],
         popular: false,
-        cuttedPrice: 0,
-        price: 3000,
-        purchaseUrl: '/payment'
+        cuttedPrice: 249,
+        price: 199,
+        mode: 'onetime',
+        productId: ''
     },
 ]

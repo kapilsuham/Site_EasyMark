@@ -2,6 +2,7 @@ import React from 'react'
 import {plan} from '@/(more)/ConfigApp'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import CheckoutButton from './CheckoutButton'
 const Pricing = () => {
     // console.log(typeof(plan));
     const router = useRouter()
@@ -43,8 +44,8 @@ const Pricing = () => {
 
                             </div>
                             
-                            {i.purchaseUrl?(<div className="card-actions justify-end">
-                                <button className="btn btn-primary" onClick={()=>router.push(i.purchaseUrl)}>Buy Now</button>
+                            {i.mode?(<div className="card-actions justify-center mt-5">
+                                <CheckoutButton mode={i.mode} productId={i.productId}/>
                             </div>):(null)}
                         </div>
                     </div>

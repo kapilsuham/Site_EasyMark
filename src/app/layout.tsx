@@ -7,13 +7,17 @@ import dynamic from 'next/dynamic'
 import PlausibleProvider from "next-plausible";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.SITE_URL as string),
   title: {
-    default: "Grow Your Startups in Minutes, Save Months | ShipForever",
+    default: "Grow Your Startups in Minutes,Save Months | ShipForever",
     template: "%s | ShipForever"
   },
   description: "Grow startups in minutes save months",
   twitter: {
-    card: "summary_large_image"
+    card: "summary_large_image",
+    site: 'shipforever.com',
+    title: 'Grow Your Startups in Minutes,Save Months',
+    description: 'ShipForever | Grow Your Startups in Minutes,Save Months',
   }
 
 };
