@@ -3,7 +3,7 @@ import React from 'react'
 
 const Avatar = () => {
     return (
-        <div className='m-10 flex'>
+        <div className='flex mt-10'>
             <div className="avatar-group -space-x-6 rtl:space-x-reverse">
                 <div className="avatar">
                     <div className="w-12">

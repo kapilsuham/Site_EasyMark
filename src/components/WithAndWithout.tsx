@@ -3,9 +3,9 @@ import React from 'react'
 const WithAndWithout = () => {
     return (
         <div>
-            <div className="hero min-h-screen mt-32 bg-base-200">
+            <div className="hero lg:min-h-screen mt-28 lg:mt-32 bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
-                    <div className='lg:w-1/2 '><div className="bg-error-content card text-error shadow-xl">
+                    <div className='lg:w-1/2'><div className="bg-error-content card text-error shadow-xl">
                         <div className="card-body text-center text-xl">
                             <div ><span>9 hrs</span> of auth integration</div>
                             <div><span>+6 hrs</span> of email setup</div>
@@ -23,18 +23,18 @@ const WithAndWithout = () => {
                             </div>
                         </div>
                     </div></div>
-                    <div className='lg:w-1/2'><div className="card bg-success text-center shadow-xl">
+                    <div className='lg:w-1/2'><div className="card lg:py-2 bg-success text-center shadow-xl">
                         <div className="card-body text-2xl">
-                            <div className="mb-5 text-3xl"><div className="text-green-600 font-semibold">=56 + ∞ hrs</div> save by ShipForever</div>
+                            <div className="lg:mb-5 text-3xl"><div className="text-green-600 font-semibold">=56 + ∞ hrs</div> save by ShipForever</div>
                             <div><span className="text-success-content">+</span> </div>
                             <div><span className="text-success-content">M</span>ade life easy</div>
                             <div><span className="text-success-content">+T</span>ime efficient</div>
                             <div><span className="text-success-content">+R</span>eady to lauch in minutes</div>
                             <div><span className="text-success-content">+U</span>limited startup launch</div>
-                            <div><span className="text-success-content">+A</span>vailable in both Ts & Js</div>
-                            <div><span className="text-success-content text-3xl">+Grow</span> rapidly</div>
-                            <div><span className="text-success-content text-4xl">+Earn</span> more easily</div>
-                            <div><span className="text-success-content text-3xl">+ ∞ hrs</span><div> save in error & overthinking...</div></div>
+                            <div><span className="text-success-content">+A</span>vailable in Ts & Js</div>
+                            <div><span className="text-success-content">+Grow</span> rapidly</div>
+                            <div><span className="text-success-content">+Earn</span> more easily</div>
+                            <div><span className="text-success-content">+ ∞ hrs</span><div> save in error & overthinking...</div></div>
                             <div className="card-actions justify-end">
                             </div>
                         </div>

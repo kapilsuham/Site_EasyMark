@@ -11,7 +11,7 @@ const Features = () => {
                     <div className='text-lg'>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
-                            <div>1st boilerplate code with bun</div>
+                            <div> The only NextJS Boilerplate with all you need to build your SaaS</div>
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
@@ -193,7 +193,7 @@ const Features = () => {
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
-                            <div>Made with Bun</div>
+                            <div>Made with SEO optimized components</div>
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
