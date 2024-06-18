@@ -20,9 +20,7 @@ const ProfileDrawer = () => {
           <div className='p-5 text-center flex-col'>
             <div className="avatar ">
               <div className="w-24 rounded-full">
-                {user.image?( <Image width={62} height={62} src={user.image} alt='img' />):
-                (  <Image width={62} height={62} src='https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg' alt='img' />)
-                }
+                <Image width={62} height={62} src={user.image?(user.image):('/logo.svg')} alt='' />
               </div>
             </div>
             <div className='text-xl'>{user.username}</div>
