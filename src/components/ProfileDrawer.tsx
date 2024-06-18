@@ -1,7 +1,6 @@
 import { User } from 'next-auth'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
-
 const ProfileDrawer = () => {
   const { data: session } = useSession()
   const user: User = session?.user as User 
