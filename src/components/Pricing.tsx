@@ -7,7 +7,7 @@ const Pricing = () => {
     // console.log(typeof(plan));
     const router = useRouter()
     return (
-        <div className='pt-28 p-3 bg-secondary-content'>
+        <div id='pricing' className='pt-20 p-3 bg-secondary-content'>
             <div>
                 <div className='text-yellow-400 text-2xl lg:text-5xl font-extrabold text-center mb-5'>Pricing</div>
                 <div className="mx-auto mb-12 max-w-2xl text-center lg:max-w-5xl">

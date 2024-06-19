@@ -4,7 +4,7 @@ import React from 'react'
 const TestimonialSingle = () => {
   return (
     <div>
-      <div className="lg:hero min-h-screen p-4 mt-20 m-auto bg-base-200">
+      <div className="lg:hero p-4 my-10 m-auto bg-base-200">
         <div className="hero-content lg:w-4/5 flex-col lg:flex-row">
           <Image width={196} height={196} alt="image" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" className="max-w-sm rounded-lg shadow-2xl" />
           <div >

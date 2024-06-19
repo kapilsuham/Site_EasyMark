@@ -11,7 +11,7 @@ const Faq = () => {
                 <div className="collapse-title text-xl font-medium">
                     Click to open this one and close others
                 </div>
-                <div className="collapse-content">
+                <div className="text-secondary collapse-content">
                     <p>hello</p>
                 </div>
             </div>
@@ -20,7 +20,7 @@ const Faq = () => {
                 <div className="collapse-title text-xl font-medium">
                     Click to open this one and close others
                 </div>
-                <div className="collapse-content">
+                <div className="text-secondary collapse-content">
                     <p>hello</p>
                 </div>
             </div>
@@ -29,7 +29,7 @@ const Faq = () => {
                 <div className="collapse-title text-xl font-medium">
                     Click to open this one and close others
                 </div>
-                <div className="collapse-content">
+                <div className="text-secondary collapse-content">
                     <p>hello</p>
                 </div>
             </div>

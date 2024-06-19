@@ -3,7 +3,8 @@ import React from 'react'
 const WithAndWithout = () => {
     return (
         <div>
-            <div className="hero lg:min-h-screen mt-28 lg:mt-32 bg-base-200">
+            <div className='text-5xl mt-10 font-extrabold text-center'><span className='text-yellow-400'>What</span> makes <span className='text-yellow-400'>ShipForever</span> important</div>
+            <div className="hero lg:min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
                     <div className='lg:w-1/2'><div className="bg-error-content card text-error shadow-xl">
                         <div className="card-body text-center text-xl">

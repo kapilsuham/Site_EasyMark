@@ -10,7 +10,7 @@ const Hero = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div>
-                    <Image src="/img.png" alt='img' width={496} height={346} className="rounded-lg shadow-2xl" />
+                    <Image src="/img.png" alt='img' width={796} height={546} className="rounded-lg" />
                     </div>
                     <div>
                         <div>
