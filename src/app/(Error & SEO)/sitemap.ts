@@ -1,5 +1,5 @@
 export default async function sitemap() {
-    const baseUrl=process.env.SITE_URL
+    const baseUrl=process.env.NEXTAUTH_URL
     return [
         {
             url: baseUrl,

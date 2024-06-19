@@ -53,7 +53,7 @@ export default function VerificationEmail({ username, otp }: VerificationEmailPr
         </Row>
         <Row>
           <Button
-            href={`${process.env.SITE_URL}/verify/${username}`}
+            href={`${process.env.NEXTAUTH_URL}/verify/${username}`}
             style={{ color: '#FFFFFF', background: '#000000', padding: 10 }}
           >
             Verify here

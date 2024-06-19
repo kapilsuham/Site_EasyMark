@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic'
 import PlausibleProvider from "next-plausible";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL as string),
+  metadataBase: new URL(process.env.NEXTAUTH_URL as string),
   title: {
     default: "Grow Your Startups in Minutes,Save Months | ShipForever",
     template: "%s | ShipForever"
