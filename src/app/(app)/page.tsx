@@ -1,16 +1,13 @@
-'use client'
-import Footer from '@/components/Footer'
-import { useSession } from 'next-auth/react'
+import { getServerSession } from 'next-auth'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import { redirect } from 'next/navigation'
+import { authOptions } from '../api/auth/[...nextauth]/options'
 
-const Page = () => {
+const Page = async() => {
   
-  const { data: session } = useSession()
-  const user = session?.user
-  const router = useRouter()
-  if (user) {
-    router.replace('/dashboard')
+  const session=await getServerSession(authOptions)
+  if (session?.user ) {
+    redirect('/dashboard')
   }
   return (
     <div className="hero p-6">
