@@ -224,7 +224,7 @@ const Features = () => {
                     <div className='text-lg'>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
-                            <div>Phonepe secure API routes</div>
+                            <div>Secure API routes for payments</div>
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>

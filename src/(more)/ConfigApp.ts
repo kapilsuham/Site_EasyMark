@@ -15,7 +15,7 @@ export const plan = [
             { id: 2, tag: 'MongoDB Database' },
             { id: 3, tag: 'Component & animations' },
             { id: 4, tag: 'Payment Gateway' },
-            { id: 5, tag: 'Magic Links' }],
+            { id: 5, tag: 'Deadly Easy Documentation' }],
         denied: [
             { id: 1, tag: 'Resend emails' },
             { id: 2, tag: 'No Login Authentication' },
@@ -36,7 +36,7 @@ export const plan = [
             { id: 2, tag: 'MongoDB Database' },
             { id: 3, tag: 'Component & animations' },
             { id: 4, tag: 'Payment Gateway' },
-            { id: 5, tag: 'Magic Links' },
+            { id: 5, tag: 'Deadly Easy Documentation' },
             { id: 6, tag: 'Resend emails' },
             { id: 7, tag: 'No Login Authentication' },
             { id: 8, tag: 'No User Details Edit' },
@@ -57,7 +57,7 @@ export const plan = [
             { id: 2, tag: 'MongoDB Database' },
             { id: 3, tag: 'Component & animations' },
             { id: 4, tag: 'Payment Gateway' },
-            { id: 5, tag: 'Magic Links' },
+            { id: 5, tag: 'Deadly Easy Documentation' },
             { id: 6, tag: 'Resend emails' },
             { id: 7, tag: 'No Login Authentication' }],
 
