@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
       <div className="navbar bg-base-100">
         <div className="flex-1">
-          <a href='/' className="btn btn-ghost w-auto h-auto text-secondary lg:text-xl"><Image width={52} height={62} src="logo.svg" alt="img" />ShipForever</a>
+          <a href='/' className="btn btn-ghost w-auto h-auto text-secondary lg:text-xl"><Image width={52} height={62} src="/logo.svg" alt="img" />ShipForever</a>
         </div>
         <div >
           <div className='hidden lg:flex'> <ThemeController/></div>

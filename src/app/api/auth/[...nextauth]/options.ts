@@ -5,8 +5,6 @@ import GoogleProvider from "next-auth/providers/google";
 import bcrypt from 'bcryptjs';
 import dbConnect from '@/lib/dbConnect';
 import UserModel from '@/(more)/models/User';
-import { UserNameValidation } from '@/(more)/schema/signUpSchema';
-import { signIn } from 'next-auth/react';
 export const authOptions: NextAuthOptions = {
 
   providers: [
@@ -101,6 +99,7 @@ export const authOptions: NextAuthOptions = {
   },
   session: {
     strategy: 'jwt',
+    maxAge: 24*60*60
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
