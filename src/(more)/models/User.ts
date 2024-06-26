@@ -22,6 +22,7 @@ const UserSchema:Schema<User>=new Schema({
         type:String,
         required:[true,"email is required"],
         unique:true,
+        trim:true,
         match:[/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g,"please use a valid email"]
     },
     password:{
