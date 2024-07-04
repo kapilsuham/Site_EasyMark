@@ -1,5 +1,5 @@
 import CheckoutButton from '@/components/CheckoutButton'
-import {products} from '@/(more)/ConfigApp'
+import {products} from '@/ConfigApp'
 const Page = () => {
   return (
     <div>

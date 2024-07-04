@@ -1,4 +1,4 @@
-import { AppDescription, DomainName, SITE_NAME } from "@/(more)/ConfigApp";
+import { AppDescription, DomainName, SITE_NAME } from "@/ConfigApp";
 
 // These are all the SEO tags you can add to your pages.
 // It prefills data with default title/description/OG, etc.. and you can cusotmize it for each page.
