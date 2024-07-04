@@ -1,5 +1,11 @@
 export const SITE_NAME = "ShipForever" //string
+// REQUIRED: a short description of your app for SEO tags (can be overwritten)
+export const AppDescription = "Grow Your Startups in Minutes,Save Months | ShipForever"
+// REQUIRED (no https://, not trialing slash at the end, just the naked domain)
+export const DomainName = "localhost:3000"
+
 export const MY_CRISP_WEBSITE_ID = ""  //string
+
 
 export const products = [
     { productId1: '' }, //string

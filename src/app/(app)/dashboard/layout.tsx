@@ -1,6 +1,14 @@
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../../api/auth/[...nextauth]/options';
 import { redirect } from 'next/navigation';
+import { getSEOTags } from "@/lib/seo";
+import { Metadata } from "next";
+
+export const metadata:Metadata = getSEOTags({
+  title: 'Dashboard',
+  canonicalUrlRelative: "/dashboard",
+});
+
 interface RootLayoutProps {
   children: React.ReactNode;
 }

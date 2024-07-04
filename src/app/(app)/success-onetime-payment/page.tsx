@@ -1,4 +1,11 @@
 import React from 'react'
+import { getSEOTags } from "@/lib/seo";
+import { Metadata } from "next";
+
+export const metadata:Metadata = getSEOTags({
+  title: 'Success',
+  canonicalUrlRelative: "/success",
+});
 
 const success = () => {
   return (

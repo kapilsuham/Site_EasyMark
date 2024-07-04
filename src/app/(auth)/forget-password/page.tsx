@@ -6,7 +6,6 @@ import axios, { AxiosError } from 'axios'
 import { ApiResponse } from "@/(more)/types/ApiResponse"
 import { toast } from "sonner"
 import Loader from "@/components/Loader"
-
 const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()

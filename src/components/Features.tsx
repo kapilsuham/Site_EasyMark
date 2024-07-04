@@ -65,7 +65,7 @@ const Features = () => {
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
-                            <div>Webhook to receive & forward emails</div>
+                            <div>Setup with Docs</div>
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
@@ -73,11 +73,11 @@ const Features = () => {
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
-                            <div>Send Magic Links</div>
+                            <div>Customizable Email</div>
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
-                            <div>Resend Email Setup with Docs</div>
+                            <div>Resend Email </div>
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2 text-success'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
@@ -146,7 +146,7 @@ const Features = () => {
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>
-                            <div>Magic Links</div>
+                            <div>Session Expiry</div>
                         </div>
                         <div className='flex lg:text-xl text-xs gap-2'>
                             <div><Image width={32} height={32} src="/tick.svg" alt="image" /></div>

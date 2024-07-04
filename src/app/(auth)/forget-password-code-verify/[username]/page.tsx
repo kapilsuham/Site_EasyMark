@@ -10,6 +10,7 @@ import { useState } from "react"
 import { toast } from "sonner"
 import Loader from "@/components/Loader"
 
+
 const VerifyAccount= ()=> {
   const router=useRouter()
   const [isSubmitting,setIsSubmitting]=useState(false)
