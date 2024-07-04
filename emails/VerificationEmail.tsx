@@ -1,4 +1,4 @@
-import { SITE_NAME } from '@/ConfigApp';
+import { SITE_NAME } from '@/app/ConfigApp';
 import {
   Html,
   Head,

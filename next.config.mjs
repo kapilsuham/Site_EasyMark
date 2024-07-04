@@ -1,17 +1,40 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    images: {
-    domains: [
-      // NextJS <Image> component needs to whitelist domains for src={}
-      "lh3.googleusercontent.com",
-      "pbs.twimg.com",
-      "images.unsplash.com",
-      "logos-world.net",
-      "img.daisyui.com",
-      "googleusercontent.com"
-
-    ],
-  },
-  };
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+    // NextJS <Image> component needs to whitelist domains for src={}
+    {
+      protocol: 'https',
+      hostname: 'lh3.googleusercontent.com',
+      port: '',
+      pathname: '/**',
+    },
+    {
+      protocol: 'https',
+      hostname: 'pbs.twimg.com',
+      port: '',
+      pathname: '/**',
+    },
+    {
+      protocol: 'https',
+      hostname: 'images.unsplash.com',
+      port: '',
+      pathname: '/**',
+    },
+    {
+      protocol: 'https',
+      hostname: 'logos-world.net',
+      port: '',
+      pathname: '/**',
+    },
+    {
+      protocol: 'https',
+      hostname: 'img.daisyui.com',
+      port: '',
+      pathname: '/**',
+    },
+  ],
+},
+};
 export default nextConfig;

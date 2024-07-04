@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { getSEOTags } from "@/lib/seo";
 import { Metadata } from "next";
 
