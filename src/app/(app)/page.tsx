@@ -2,6 +2,7 @@ import { getServerSession } from 'next-auth'
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import { authOptions } from '../api/auth/[...nextauth]/options'
+import Hero from '@/components/Hero'
 
 const Page = async() => {
   

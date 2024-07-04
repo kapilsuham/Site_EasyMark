@@ -8,6 +8,9 @@ const nextConfig = {
       "pbs.twimg.com",
       "images.unsplash.com",
       "logos-world.net",
+      "img.daisyui.com",
+      "googleusercontent.com"
+
     ],
   },
   };
