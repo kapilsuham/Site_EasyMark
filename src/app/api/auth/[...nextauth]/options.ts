@@ -58,7 +58,7 @@ export const authOptions: NextAuthOptions = {
         token._id = user._id?.toString(); // Convert ObjectId to string
         token.isVerified = user.isVerified;
         token.subscriptionHasAccess = user.subscriptionHasAccess
-        token.oneTimeHasAccess = user.oneTimeHasAccess
+        token.LifeTimeHasAccess = user.LifeTimeHasAccess
         token.username = user.username;
       }
       return token;
@@ -68,7 +68,7 @@ export const authOptions: NextAuthOptions = {
         session.user._id = token._id;
         session.user.isVerified = token.isVerified;
         session.user.subscriptionHasAccess = token.subscriptionHasAccess
-        session.user.oneTimeHasAccess = token.oneTimeHasAccess
+        session.user.LifeTimeHasAccess = token.LifeTimeHasAccess
         session.user.username = token.username;
       }
       return session;
@@ -82,7 +82,7 @@ export const authOptions: NextAuthOptions = {
           user._id=userExist?._id?.toString();
           user.username=userExist?.username
           user.isVerified=userExist?.isVerified
-          user.oneTimeHasAccess=userExist?.oneTimeHasAccess
+          user.LifeTimeHasAccess=userExist?.LifeTimeHasAccess
           user.subscriptionHasAccess=userExist?.subscriptionHasAccess
           if (!userExist) {
             return false

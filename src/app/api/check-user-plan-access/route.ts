@@ -10,10 +10,10 @@ export async function GET(request: Request) {
             const username = session!.user.username
             const user = await UserModel.findOne({ username })
             if (user) {
-                const oneTimeHasAccess = user.oneTimeHasAccess
+                const LifeTimeHasAccess = user.LifeTimeHasAccess
                 const subscriptionHasAccess = user.subscriptionHasAccess
                 return Response.json({
-                    data: { oneTimeHasAccess, subscriptionHasAccess },
+                    data: { LifeTimeHasAccess, subscriptionHasAccess },
                     message: 'user details send'
                 })
             }

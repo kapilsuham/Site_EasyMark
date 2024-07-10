@@ -26,7 +26,7 @@ const ProfileDrawer = () => {
           </div>
           <div className='container border border-secondary p-5 rounded-lg'>
             <div className='text-xl text-center m-2'>Details</div>
-            <div className='text-white'><span className='text-primary-content'>Onetime-Payment:</span> {user.oneTimeHasAccess?("Access"):("Not-Access")}</div>
+            <div className='text-white'><span className='text-primary-content'>Onetime-Payment:</span> {user.LifeTimeHasAccess?("Access"):("Not-Access")}</div>
             <div className='text-white'><span className='text-primary-content'>Subscription: </span>{user.subscriptionHasAccess?("Access"):("Not-Access")}</div> 
             </div>
         </div>

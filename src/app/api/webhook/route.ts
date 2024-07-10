@@ -39,7 +39,7 @@ export async function POST(req: Request) {
           await dbConnect()
           const user = await UserModel.findOne({ email, isVerified: true })
           if (user) {
-            user.oneTimeHasAccess = true
+            user.LifeTimeHasAccess = true
             await user.save()
             console.log('===============order_paid');
           }

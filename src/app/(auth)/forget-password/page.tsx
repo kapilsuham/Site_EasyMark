@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import axios, { AxiosError } from 'axios'
+import axios from 'axios'
 import { ApiResponse } from "@/(more)/types/ApiResponse"
 import { toast } from "sonner"
 import Loader from "@/components/Loader"

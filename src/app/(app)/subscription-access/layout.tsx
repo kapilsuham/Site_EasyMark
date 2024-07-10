@@ -5,8 +5,8 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 export const metadata:Metadata = getSEOTags({
-  title: 'Onetime Payment Success',
-  canonicalUrlRelative: "/success-onetime-payment",
+  title: 'Subscription Access',
+  canonicalUrlRelative: "/subscription-access",
 });
 
 export default async function RootLayout({ children }: RootLayoutProps) {

@@ -6,8 +6,8 @@ export interface User extends Document{
     verifyCode:string,
     verifyCodeExpiry:Date,
     isVerified:boolean, 
-    oneTimeHasAccess:boolean, 
-    subscriptionHasAccess:boolean,
+    LifeTimeHasAccess:boolean,       // for one-time payment models
+    subscriptionHasAccess:boolean,  // for subscription payment models
     userImage:string,
     createdAt:Date,
 }
@@ -43,7 +43,7 @@ const UserSchema:Schema<User>=new Schema({
         type:Boolean,
         default:false,
     },
-    oneTimeHasAccess:{
+    LifeTimeHasAccess:{
         type:Boolean,
         default:false,
     },
