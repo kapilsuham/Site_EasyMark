@@ -3,8 +3,8 @@ import Script from "next/script";
 import { articles } from "../_assets/content";
 import BadgeCategory from "../_assets/components/BadgeCategory";
 import Avatar from "../_assets/components/Avatar";
-import { getSEOTags } from "@/libs/seo";
-import config from "@/config";
+import { getSEOTags } from "@/lib/seo";
+import { DomainName } from "@/app/ConfigApp";
 
 export async function generateMetadata({ params }) {
   const article = articles.find((article) => article.slug === params.articleId);
@@ -57,12 +57,12 @@ export default async function Article({ params }) {
             "@type": "Article",
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://${config.domainName}/blog/${article.slug}`,
+              "@id": `https://${DomainName}/blog/${article.slug}`,
             },
             name: article.title,
             headline: article.title,
             description: article.description,
-            image: `https://${config.domainName}${article.image.urlRelative}`,
+            image: `https://${DomainName}${article.image.urlRelative}`,
             datePublished: article.publishedAt,
             dateModified: article.publishedAt,
             author: {

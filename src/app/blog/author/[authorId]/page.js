@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { authors, articles } from "../../_assets/content";
 import CardArticle from "../../_assets/components/CardArticle";
-import { getSEOTags } from "@/libs/seo";
-import config from "@/config";
+import { getSEOTags } from "@/lib/seo";
+import { SITE_NAME } from "@/app/ConfigApp";
 
 export async function generateMetadata({ params }) {
   const author = authors.find((author) => author.slug === params.authorId);
 
   return getSEOTags({
-    title: `${author.name}, Author at ${config.appName}'s Blog`,
-    description: `${author.name}, Author at ${config.appName}'s Blog`,
+    title: `${author.name}, Author at ${SITE_NAME}'s Blog`,
+    description: `${author.name}, Author at ${SITE_NAME}'s Blog`,
     canonicalUrlRelative: `/blog/author/${author.slug}`,
   });
 }

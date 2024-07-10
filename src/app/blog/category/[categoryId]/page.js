@@ -1,8 +1,8 @@
 import { categories, articles } from "../../_assets/content";
 import CardArticle from "../../_assets/components/CardArticle";
 import CardCategory from "../../_assets/components/CardCategory";
-import { getSEOTags } from "@/libs/seo";
-import config from "@/config";
+import { getSEOTags } from "@/lib/seo";
+import { SITE_NAME } from "@/app/ConfigApp";
 
 export async function generateMetadata({ params }) {
   const category = categories.find(
@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
   );
 
   return getSEOTags({
-    title: `${category.title} | Blog by ${config.appName}`,
+    title: `${category.title} | Blog by ${SITE_NAME}`,
     description: category.description,
     canonicalUrlRelative: `/blog/category/${category.slug}`,
   });

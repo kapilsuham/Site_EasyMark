@@ -1,6 +1,6 @@
 import Image from "next/image";
 import kapilImg from "@/app/blog/_assets/images/authors/kapil.png";
-import introducingshipforeverImg from "@/public/blog/introducing-shipforever/header.png";
+import introducingshipforeverImg from "@/../public/blog/introducing-shipforever/header.png";
 
 // ==================================================================================================================================================================
 // BLOG CATEGORIES 🏷️
@@ -185,7 +185,6 @@ export const articles = [
           height={500}
           priority={true}
           className="rounded-box"
-          placeholder="blur"
         />
         <section>
           <h2 className={styles.h2}>Introduction</h2>

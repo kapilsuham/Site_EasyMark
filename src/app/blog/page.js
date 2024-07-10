@@ -1,11 +1,11 @@
 import { categories, articles } from "./_assets/content";
 import CardArticle from "./_assets/components/CardArticle";
 import CardCategory from "./_assets/components/CardCategory";
-import config from "@/config";
-import { getSEOTags } from "@/libs/seo";
+import { getSEOTags } from "@/lib/seo";
+import { SITE_NAME } from "../ConfigApp";
 
 export const metadata = getSEOTags({
-  title: `${config.appName} Blog | ShipForever`,
+  title: `${SITE_NAME} Blog | ShipForever`,
   description:
     "Learn how to use ShipForevr",
   canonicalUrlRelative: "/blog",
@@ -19,7 +19,7 @@ export default async function Blog() {
     <>
       <section className="text-center max-w-xl mx-auto mt-12 mb-24 md:mb-32">
         <h1 className="font-extrabold text-3xl lg:text-5xl tracking-tight mb-6">
-          The {config.appName} Blog
+          The {SITE_NAME} Blog
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
         Learn how to use ShipForevr

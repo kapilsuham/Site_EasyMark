@@ -5,10 +5,9 @@ import { useSearchParams } from "next/navigation";
 import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/app/icon.png";
-import config from "@/config";
 import { categories } from "../content";
-import ButtonSignin from "@/components/ButtonSignin";
+// import ButtonSignin from "@/components/ButtonSignin";
+import { SITE_NAME } from "@/app/ConfigApp";
 
 const links = [
   {
@@ -18,7 +17,8 @@ const links = [
 ];
 
 const cta = (
-  <ButtonSignin text="Prevent disputes" extraStyle="btn-primary md:btn-sm" />
+  // <ButtonSignin text="Prevent disputes" extraStyle="btn-primary md:btn-sm" />
+    <div>hi</div>
 );
 
 const ButtonPopoverCategories = () => {
@@ -156,17 +156,17 @@ const HeaderBlog = () => {
           <Link
             className="flex items-center gap-2 shrink-0 "
             href="/"
-            title={`${config.appName} hompage`}
+            title={`${SITE_NAME} hompage`}
           >
             <Image
-              src={logo}
-              alt={`${config.appName} logo`}
+              src="/logo.svg"
+              alt={`${SITE_NAME} logo`}
               className="w-8"
               priority={true}
               width={32}
               height={32}
             />
-            <span className="font-extrabold text-lg">{config.appName}</span>
+            <span className="font-extrabold text-lg">{SITE_NAME}</span>
           </Link>
         </div>
         {/* Burger button to open menu on mobile */}
@@ -223,19 +223,18 @@ const HeaderBlog = () => {
           <div className="flex items-center justify-between">
             <Link
               className="flex items-center gap-2 shrink-0 "
-              title={`${config.appName} hompage`}
+              title={`${SITE_NAME} hompage`}
               href="/"
             >
               <Image
-                src={logo}
-                alt={`${config.appName} logo`}
+                src="/logo.svg"
+                alt={`${SITE_NAME} logo`}
                 className="w-8"
-                placeholder="blur"
                 priority={true}
                 width={32}
                 height={32}
               />
-              <span className="font-extrabold text-lg">{config.appName}</span>
+              <span className="font-extrabold text-lg">{SITE_NAME}</span>
             </Link>
             <button
               type="button"
