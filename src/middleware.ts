@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getToken } from 'next-auth/jwt';
 export { default } from 'next-auth/middleware';
 export const config = {
-  matcher: ['/dashboard/:path*', '/sign-in', '/sign-up', '/', '/verify/:path*',
-    '/success-subscription-payment','/success-onetime-payment'],
+  matcher: ['/dashboard/:path*', '/sign-in', '/sign-up', '/', '/verify/:path*',],
 };
 export async function middleware(request: NextRequest) {
   const token = await getToken({ req: request });
@@ -19,17 +18,5 @@ export async function middleware(request: NextRequest) {
   ) {
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
-
-  if (!token && url.pathname.startsWith('/dashboard')) {
-    return NextResponse.redirect(new URL('/sign-in', request.url));
-  }
-  
-  if (!token?.oneTimeHasAccess && url.pathname.startsWith('/success-onetime-payment')) {
-    return NextResponse.redirect(new URL('/failure', request.url));
-  }
-  if (!token?.subscriptionHasAccess  && url.pathname.startsWith('/success-subscription-payment')) {
-    return NextResponse.redirect(new URL('/failure', request.url));
-  }
-
   return NextResponse.next();
 }
