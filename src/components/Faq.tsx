@@ -1,5 +1,3 @@
-
-
 const Faq = () => {
     return (
         <div className='w-11/12 mt-32 lg:flex m-auto'>
@@ -11,7 +9,7 @@ const Faq = () => {
                 <div className="collapse-title text-xl font-medium">
                     Click to open this one and close others
                 </div>
-                <div className="text-secondary collapse-content">
+                <div className="text-base-content collapse-content">
                     <p>hello</p>
                 </div>
             </div>
@@ -20,7 +18,7 @@ const Faq = () => {
                 <div className="collapse-title text-xl font-medium">
                     Click to open this one and close others
                 </div>
-                <div className="text-secondary collapse-content">
+                <div className="text-base-content collapse-content">
                     <p>hello</p>
                 </div>
             </div>
@@ -29,7 +27,7 @@ const Faq = () => {
                 <div className="collapse-title text-xl font-medium">
                     Click to open this one and close others
                 </div>
-                <div className="text-secondary collapse-content">
+                <div className="text-base-content collapse-content">
                     <p>hello</p>
                 </div>
             </div>

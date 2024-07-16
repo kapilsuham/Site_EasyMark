@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation'
 import ThemeController from './ThemeController'
 import ProfileDrawer from './ProfileDrawer'
 import Image from 'next/image'
-
 const Navbar = () => {
   const { data: session } = useSession()
   const user: User = session?.user as User
@@ -14,7 +13,7 @@ const Navbar = () => {
   return (
       <div className="navbar bg-base-100">
         <div className="flex-1">
-          <a href='/' className="btn btn-ghost w-auto h-auto text-secondary lg:text-xl"><Image width={52} height={62} src="/logo.svg" alt="img" />ShipForever</a>
+          <a href='/' className="btn btn-ghost w-auto h-auto text-base-content lg:text-xl"><Image width={52} height={62} src="/logo.png" alt="img" />ShipForever</a>
         </div>
         <div >
           <div className='hidden lg:flex'> <ThemeController/></div>

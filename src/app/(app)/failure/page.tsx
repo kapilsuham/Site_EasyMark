@@ -4,9 +4,7 @@ import { Metadata } from "next";
 export const metadata:Metadata = getSEOTags({
   title: 'Failure',
   canonicalUrlRelative: "/failure",
-});
-
-const Page = () => {
+});const Page = () => {
 
   return (
     <div className='flex justify-center items-center text-center'>

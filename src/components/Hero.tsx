@@ -1,9 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation'
-
 import Avatar from './Avatar'
 import Image from 'next/image'
-
 const Hero = () => {
     const router = useRouter()
     return (

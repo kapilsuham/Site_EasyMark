@@ -28,9 +28,7 @@ import { SITE_NAME } from "../ConfigApp";
 export const metadata = getSEOTags({
   title: 'Terms and Conditions',
   canonicalUrlRelative: "/tos",
-});
-
-const TOS = () => {
+});const TOS = () => {
   return (
     <main className="max-w-xl mx-auto">
       <div className="p-5">

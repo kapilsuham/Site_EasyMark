@@ -28,9 +28,7 @@ import { SITE_NAME } from "../ConfigApp";
 export const metadata = getSEOTags({
   title: 'Privacy Policy',
   canonicalUrlRelative: "/privacy-policy",
-});
-
-const Page = () => {
+});const Page = () => {
   return (
     <main className="max-w-xl mx-auto">
       <div className="p-5">

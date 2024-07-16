@@ -2,9 +2,7 @@ import mongoose from 'mongoose';
 
 type ConnectionObject = {
   isConnected?: number;
-};
-
-const connection: ConnectionObject = {};
+};const connection: ConnectionObject = {};
 
 async function dbConnect(): Promise<void> {
   // Check if we have a connection to the database or if it's currently connecting

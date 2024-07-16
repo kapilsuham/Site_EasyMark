@@ -18,7 +18,7 @@ const ProfileDrawer = () => {
           <div className='p-5 text-center flex-col'>
             <div className="avatar ">
               <div className="w-24 rounded-full">
-                <Image width={62} height={62} src={user.image?(user.image):('/logo.svg')} alt='' />
+                <Image width={62} height={62} src={user.image?(user.image):('/logo.png')} alt='' />
               </div>
             </div>
             <div className='text-xl'>{user.username}</div>

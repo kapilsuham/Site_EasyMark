@@ -7,21 +7,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { categories } from "../content";
 // import ButtonSignin from "@/components/ButtonSignin";
-import { SITE_NAME } from "@/app/ConfigApp";
-
-const links = [
+import { SITE_NAME } from "@/app/ConfigApp";const links = [
   {
     href: "/blog/",
     label: "All Posts",
   },
-];
-
-const cta = (
+];const cta = (
   // <ButtonSignin text="Prevent disputes" extraStyle="btn-primary md:btn-sm" />
     <div>hi</div>
-);
-
-const ButtonPopoverCategories = () => {
+);const ButtonPopoverCategories = () => {
   return (
     <Popover className="relative z-30">
       {({ open }) => (
@@ -85,9 +79,7 @@ const ButtonPopoverCategories = () => {
       )}
     </Popover>
   );
-};
-
-const ButtonAccordionCategories = () => {
+};const ButtonAccordionCategories = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -159,7 +151,7 @@ const HeaderBlog = () => {
             title={`${SITE_NAME} hompage`}
           >
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt={`${SITE_NAME} logo`}
               className="w-8"
               priority={true}
@@ -227,7 +219,7 @@ const HeaderBlog = () => {
               href="/"
             >
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt={`${SITE_NAME} logo`}
                 className="w-8"
                 priority={true}

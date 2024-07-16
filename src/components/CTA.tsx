@@ -1,18 +1,16 @@
-
-
 const CTA = () => {
   return (
-<div className="hero min-h-screen mt-32" style={{backgroundImage: 'url(https://img.freepik.com/free-photo/business-teammates-working-late_23-2148991316.jpg)'}}>
-  <div className="hero-overlay bg-opacity-55"></div>
-  <div className="hero-content text-center text-neutral-content">
-    <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
+    <div className="hero min-h-screen mt-32" style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/business-teammates-working-late_23-2148991316.jpg)' }}>
+      <div className="hero-overlay bg-opacity-55"></div>
+      <div className="hero-content text-center text-neutral-content">
+        <div className="max-w-md">
+          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+          <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+          <button className="btn btn-primary">Get Started</button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-)
+  )
 }
 
 export default CTA

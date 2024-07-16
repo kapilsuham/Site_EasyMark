@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import Loader from './Loader'
-
 const WaitListButton = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm()

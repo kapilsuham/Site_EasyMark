@@ -22,7 +22,7 @@ const Sidebar = () => {
             <div className={`${ham?("-ml-96"):("")} lg:ml-0`}>
             <aside className="flex h-screen fixed w-full lg:w-1/6 flex-col main overflow-y-auto border-r bg-neutral border-neutral px-2 py-5">
                 <div className='flex'>
-                    <Image className='w-auto h-auto' width={62} height={62} src="/logo.svg" alt="/logo" />
+                    <Image className='w-auto h-auto' width={62} height={62} src="/logo.png" alt="/logo" />
 
                     <div className='mt-2 text-xl font-semibold'>ShipForever</div>
                 </div>
@@ -32,7 +32,7 @@ const Sidebar = () => {
                         <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="App" defaultChecked  readOnly />
                         <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
                             <a className='ml-5' href="/">Get Started</a>
-                            <div className='text-secondary mt-5'>Tutorials</div>
+                            <div className='text-base-content mt-5'>Tutorials</div>
                             <ul>
                                 <li className='ml-5 mt-2'><a href="/">Start in 2 minute</a></li>
                                 <li className='ml-5 mt-2'><a href="/">Static Page</a></li>
@@ -40,7 +40,7 @@ const Sidebar = () => {
                                 <li className='ml-5 mt-2'><a href="/">API call</a></li>
                                 <li className='ml-5 mt-2'><a href="/">Private page</a></li>
                             </ul>
-                            <div className='text-secondary mt-5'>Features</div>
+                            <div className='text-base-content mt-5'>Features</div>
                             <ul>
                                 <li className='ml-5 mt-2'><a href="/">Database</a></li>
                                 <li className='ml-5 mt-2'><a href="/">Email</a></li>
@@ -53,7 +53,7 @@ const Sidebar = () => {
                         <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Page" />
                         <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
                             <a className='ml-5' href="/">Get Started</a>
-                            <div className='text-secondary mt-5'>Tutorials</div>
+                            <div className='text-base-content mt-5'>Tutorials</div>
                             <ul>
                                 <li className='ml-5 mt-2'><a href="/">Start in 2 minute</a></li>
                                 <li className='ml-5 mt-2'><a href="/">Static Page</a></li>
@@ -61,7 +61,7 @@ const Sidebar = () => {
                                 <li className='ml-5 mt-2'><a href="/">API call</a></li>
                                 <li className='ml-5 mt-2'><a href="/">Private page</a></li>
                             </ul>
-                            <div className='text-secondary mt-5'>Features</div>
+                            <div className='text-base-content mt-5'>Features</div>
                             <ul>
                                 <li className='ml-5 mt-2'><a href="/">Database</a></li>
                                 <li className='ml-5 mt-2'><a href="/">Payments</a></li>

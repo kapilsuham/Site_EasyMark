@@ -7,9 +7,7 @@ import { useRouter } from "next/navigation"
 import { signInSchema } from "@/(more)/schema/signInSchema"
 import { signIn, useSession } from "next-auth/react"
 import { toast } from "sonner"
-import Loader from "@/components/Loader"
-
-const Page = () => {
+import Loader from "@/components/Loader"const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
   const form = useForm<z.infer<typeof signInSchema>>({
