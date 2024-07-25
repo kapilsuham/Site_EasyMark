@@ -1,8 +1,9 @@
 'use client'
+
 import { forgetPasswordCodeSchema } from "@/(more)/schema/forgetPasswordCodeSchema"
 import { ApiResponse } from "@/(more)/types/ApiResponse"
 import { zodResolver } from "@hookform/resolvers/zod"
-import axios, { AxiosError } from "axios"
+import axios from "axios"
 import { useParams, useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 import * as z from 'zod'
@@ -37,7 +38,6 @@ const VerifyAccount= ()=> {
       toast('success')
     } catch (error) {
       console.log("error in changing password",error);
-      const axiosError=error as AxiosError<ApiResponse>
       toast("Invalid Code")
     }
     finally{
@@ -61,7 +61,6 @@ const VerifyAccount= ()=> {
       toast('Code Send')
     } catch (error) {
       console.log("error in sending code",error);
-      const axiosError=error as AxiosError<ApiResponse>
       toast("Resend code failed")
     }
     setIsSubmitting(false)

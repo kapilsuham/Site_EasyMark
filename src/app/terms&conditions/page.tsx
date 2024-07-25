@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSEOTags } from "@/lib/seo";
 import { SITE_NAME } from "../ConfigApp";
+import { Metadata } from "next";
 
 // CHATGPT PROMPT TO GENERATE YOUR TERMS & SERVICES — replace with your own data 👇
 
@@ -25,7 +26,7 @@ import { SITE_NAME } from "../ConfigApp";
 
 // Please write a simple Terms & Services for my site. Add the current date. Do not add or explain your reasoning.
 
-export const metadata = getSEOTags({
+export const metadata:Metadata = getSEOTags({
   title: 'Terms and Conditions',
   canonicalUrlRelative: "/tos",
 });const TOS = () => {

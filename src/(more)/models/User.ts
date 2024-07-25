@@ -52,9 +52,6 @@ const UserSchema:Schema<User>=new Schema({
         type:Boolean,
         default:false
     },
-    userImage:{
-        type:String,
-    },
     createdAt:{
         type:Date,
         default:Date.now()
