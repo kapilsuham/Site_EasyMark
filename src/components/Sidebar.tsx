@@ -1,4 +1,6 @@
 'use client'
+
+import { SITE_NAME } from '@/app/ConfigApp'
 import Image from 'next/image'
 import React, { useState } from 'react'
 const Sidebar = () => {
@@ -24,10 +26,10 @@ const Sidebar = () => {
                 <div className='flex'>
                     <Image className='w-auto h-auto' width={62} height={62} src="/logo.png" alt="/logo" />
 
-                    <div className='mt-2 text-xl font-semibold'>ShipForever</div>
+                    <div className='mt-2 text-xl font-semibold'>{SITE_NAME}</div>
                 </div>
 
-                <div className="justify-center mt-5">
+                <div className="justify-center text-base-content mt-5">
                     <div role="tablist" className="tabs tabs-lifted">
                         <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="App" defaultChecked  readOnly />
                         <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">

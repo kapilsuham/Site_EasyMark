@@ -1,4 +1,3 @@
-
 import { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import GoogleProvider from "next-auth/providers/google";
@@ -32,7 +31,7 @@ export const authOptions: NextAuthOptions = {
             throw new Error('No user found with this email');
           }
           if (!user.isVerified) {
-            throw new Error('Please verify your account before to sign in');
+            throw new Error('Please verify your account to sign in');
           }
           const isPasswordCorrect = await bcrypt.compare(
             credentials.password,
@@ -57,9 +56,6 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         token._id = user._id?.toString(); // Convert ObjectId to string
         token.isVerified = user.isVerified;
-        token.subscriptionHasAccess = user.subscriptionHasAccess
-        token.LifeTimeHasAccess = user.LifeTimeHasAccess
-        token.username = user.username;
       }
       return token;
     },
@@ -67,9 +63,6 @@ export const authOptions: NextAuthOptions = {
       if (token) {
         session.user._id = token._id;
         session.user.isVerified = token.isVerified;
-        session.user.subscriptionHasAccess = token.subscriptionHasAccess
-        session.user.LifeTimeHasAccess = token.LifeTimeHasAccess
-        session.user.username = token.username;
       }
       return session;
     },
@@ -80,10 +73,7 @@ export const authOptions: NextAuthOptions = {
           await dbConnect()
           const userExist = await UserModel.findOne({ email: user?.email, isVerified: true })
           user._id=userExist?._id?.toString();
-          user.username=userExist?.username
           user.isVerified=userExist?.isVerified
-          user.LifeTimeHasAccess=userExist?.LifeTimeHasAccess
-          user.subscriptionHasAccess=userExist?.subscriptionHasAccess
           if (!userExist) {
             return false
           }
@@ -99,7 +89,7 @@ export const authOptions: NextAuthOptions = {
   },
   session: {
     strategy: 'jwt',
-    maxAge: 24*60*60
+    maxAge: 30*24*60*60
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {

@@ -5,7 +5,7 @@ import { getSEOTags } from "@/lib/seo";
 import { SITE_NAME } from "../ConfigApp";
 
 export const metadata = getSEOTags({
-  title: `${SITE_NAME} Blog | ShipForever`,
+  title: `${SITE_NAME} Blog | ${SITE_NAME}`,
   description:
     "Learn how to use ShipForevr",
   canonicalUrlRelative: "/blog",

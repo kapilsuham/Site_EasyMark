@@ -1,8 +1,8 @@
 "use client";
+
 import axios from "axios";
 import Loader from "./Loader";
 import { useState } from "react";
-import { signOut } from "next-auth/react";
 
 export default function CheckoutButton(data: any) {
 
@@ -20,7 +20,6 @@ export default function CheckoutButton(data: any) {
       window.open(response.data.checkoutUrl, "_blank");
       // console.log(response.data);
 
-      signOut()
     } catch (error) {
       console.error(error);
       alert("Failed to buy product");

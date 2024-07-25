@@ -8,7 +8,8 @@ import { useForm } from "react-hook-form"
 import * as z from 'zod'
 import { useState } from "react"
 import { toast } from "sonner"
-import Loader from "@/components/Loader"const VerifyAccount = () => {
+import Loader from "@/components/Loader"
+const Page = () => {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const params = useParams<{ username: string }>()
@@ -71,8 +72,8 @@ import Loader from "@/components/Loader"const VerifyAccount = () => {
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Verify now!</h1>
-          <p className="py-6">A verification code is send on your email.</p>
+          <h1 className="text-5xl font-bold text-base-content">Verify now!</h1>
+          <p className="py-6 text-base-content">A verification code is send on your email.</p>
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
@@ -80,7 +81,7 @@ import Loader from "@/components/Loader"const VerifyAccount = () => {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input type="code" placeholder="Code" className="input input-bordered" {...form.register("code")} />
+              <input type="code" placeholder="Code" className="input input-bordered text-base-content" {...form.register("code")} />
             </div>
             <div className="form-control mt-6">
               <button disabled={isSubmitting} type="submit" className="btn btn-primary"> {isSubmitting ? (
@@ -98,4 +99,4 @@ import Loader from "@/components/Loader"const VerifyAccount = () => {
   )
 }
 
-export default VerifyAccount
+export default Page

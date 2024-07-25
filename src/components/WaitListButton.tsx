@@ -1,4 +1,5 @@
 'use client'
+
 import { ApiResponse } from '@/(more)/types/ApiResponse'
 import axios, { AxiosError } from 'axios'
 import React, { useState } from 'react'
@@ -31,14 +32,14 @@ const WaitListButton = () => {
     <div>
       <div className="hero bg-base-200">
         <div className="text-center flex-col">
-          <div className='text-5xl font-extrabold'>Join Us!</div>
+          <div className='text-5xl font-extrabold text-base-content'>Join Us!</div>
           <div className="card shrink-0 w-full max-w-sm lg:shadow-2xl bg-base-100">
             <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="email" className="input input-bordered" {...form.register("email")} required />
+                <input type="email" placeholder="email" className="input input-bordered text-base-content" {...form.register("email")} required />
               </div>
               <div className="form-control mt-6">
                 <button type="submit" disabled={isSubmitting} className="btn btn-primary"> {isSubmitting ? (

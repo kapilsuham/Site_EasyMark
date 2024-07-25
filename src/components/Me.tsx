@@ -3,7 +3,7 @@ const Me = () => {
     return (
         <div className='container m-auto mt-32 w-4/5 lg:w-1/2 text-base-content'>
             <div className='container justify-center lg:flex lg:gap-5'>
-                <div className='m-auto'><Image className='max-w-sm rounded-lg shadow-2xl' width={160} height={160} src="/me.jpg" alt="img" /></div>
+                <div className='m-auto'><Image className='max-w-sm rounded-lg shadow-2xl' width={160} height={160} src="/me.png" alt="img" /></div>
                 <div ><div className='text-xl'>Hey, It's Kapil</div>
                     <div>I am 19 year old & working as a solopreneur.</div>
                     <div>Back In 2021, I built many startup for more than a year, and spend hours in writing repititive line of code again and again.

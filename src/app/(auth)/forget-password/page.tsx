@@ -32,8 +32,8 @@ const Page = () => {
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Forget Password!</h1>
-          <p className="py-6">Don't worry about anything.</p>
+          <h1 className="text-5xl font-bold text-base-content">Forget Password!</h1>
+          <p className="py-6 text-base-content">Don't worry about anything.</p>
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
@@ -45,7 +45,7 @@ const Page = () => {
                 <label className="label">
                   <span className="label-text">Username</span>
                 </label>
-                <input type="username" placeholder="Username" className="input input-bordered" {...form.register("username")}  />
+                <input type="username" placeholder="Username" className="input input-bordered text-base-content" {...form.register("username")}  />
               </div></div>
 
               <input type="radio" name="my_tabs_1" role="tab" className="tab px-14" aria-label="Email" />
@@ -53,7 +53,7 @@ const Page = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="email" className="input input-bordered" {...form.register("email")}  />
+                <input type="email" placeholder="email" className="input input-bordered text-base-content" {...form.register("email")}  />
               </div></div>
             </div>
 

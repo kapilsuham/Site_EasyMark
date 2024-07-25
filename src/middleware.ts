@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getToken } from 'next-auth/jwt';
 export { default } from 'next-auth/middleware';
 export const config = {
-  matcher: ['/dashboard/:path*', '/sign-in', '/sign-up', '/', '/verify/:path*',],
+  matcher: ['/dashboard/:path*', '/sign-in', '/sign-up', '/', '/verify/:path*', '/lifetime-access', '/subscription-access'],
 };
 export async function middleware(request: NextRequest) {
   const token = await getToken({ req: request });
@@ -17,6 +17,13 @@ export async function middleware(request: NextRequest) {
       url.pathname === '/')
   ) {
     return NextResponse.redirect(new URL('/dashboard', request.url));
+  }
+  if (
+    !token &&
+    (url.pathname.startsWith('/lifetime-access') ||
+      url.pathname.startsWith('/subscription-access'))
+  ) {
+    return NextResponse.redirect(new URL('/sign-in', request.url));
   }
   return NextResponse.next();
 }

@@ -1,13 +1,15 @@
+'use client'
+
 const Modal = () => {
   return (
     <div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
-      <button className="btn" onClick={() => {
+      <button className="btn bg-base-300" onClick={() => {
         if (document) {
           (document.getElementById('my_modal_5') as HTMLFormElement).showModal();
         }
       }}>open modal</button>
-      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+      <dialog id="my_modal_5" className="modal text-base-content modal-bottom sm:modal-middle">
         <div className="modal-box">
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">Press ESC key or click the button below to close</p>

@@ -11,7 +11,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { toast } from "sonner"
 import Loader from "@/components/Loader"
 
-export default function Home() {
+export default function Page() {
   const [username, setUsername] = useState('')
   const [usernameMessage, setUsernameMessage] = useState('')
   const [isCheckingUsername, setIsCheckingUsername] = useState(false)
@@ -56,8 +56,6 @@ export default function Home() {
       router.replace(`/verify/${username}?email=${data?.email}`)
     } catch (error) {
       console.log("error in sign-up of user", error);
-      const axiosError = error as AxiosError<ApiResponse>
-      let errorMessage = axiosError.response?.data.message
       toast(
         "sign-up failed try another email",
       )
@@ -70,7 +68,7 @@ export default function Home() {
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">SignUp now!</h1>
+          <h1 className="text-5xl text-base-content font-bold">SignUp now!</h1>
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
@@ -78,7 +76,7 @@ export default function Home() {
               <label className="label">
                 <span className="label-text">Username</span>
               </label>
-              <input type="username" placeholder="Username" className="input input-bordered" required {...form.register("username")}
+              <input type="username" placeholder="Username" className="input input-bordered text-base-content" required {...form.register("username")}
                 onChange={event => debounced(event.target.value)} />
             </div>
             {isCheckingUsername && <span className="loading loading-spinner loading-sm"></span>
@@ -90,13 +88,13 @@ export default function Home() {
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
-              <input type="email" placeholder="email" className="input input-bordered" {...form.register("email")} required />
+              <input type="email" placeholder="email" className="input input-bordered text-base-content" {...form.register("email")} required />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input type="password" placeholder="password" className="input input-bordered" {...form.register("password")} required />
+              <input type="password" placeholder="password" className="input input-bordered text-base-content" {...form.register("password")} required />
             </div>
             <div className="form-control mt-6">
               <button type="submit" disabled={isSubmitting} className="btn btn-primary"> {isSubmitting ? (
@@ -105,7 +103,7 @@ export default function Home() {
                 </>
               ) : ("Sign-Up")}</button>
             </div>
-            <div>Already have account-<a className="link" href="/sign-in">SignIn</a>
+            <div className="text-base-content">Already have account-<a className="link" href="/sign-in">SignIn</a>
             </div>
           </form>
         </div>

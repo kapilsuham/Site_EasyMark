@@ -1,6 +1,6 @@
 const CTA = () => {
   return (
-    <div className="hero min-h-screen mt-32" style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/business-teammates-working-late_23-2148991316.jpg)' }}>
+    <div className="hero min-h-screen mt-20" style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/business-teammates-working-late_23-2148991316.jpg)' }}>
       <div className="hero-overlay bg-opacity-55"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">

@@ -1,6 +1,8 @@
 import UserModel from "@/(more)/models/User";
 import dbConnect from "@/lib/dbConnect";
 import crypto from "crypto";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../auth/[...nextauth]/options";
 export async function POST(req: Request) {
   try {
 
@@ -11,7 +13,7 @@ export async function POST(req: Request) {
     const body = await req.json();
 
 
-    
+
     // Check signature
     const secret = process.env.LEMON_SQUEEZY_WEBHOOK_SIGNATURE as string;
     const hmac = crypto.createHmac("sha256", secret);
@@ -92,5 +94,42 @@ export async function POST(req: Request) {
   } catch (err) {
     console.error(err);
     return Response.json({ message: "Server error" }, { status: 500 });
+  }
+}
+
+export async function GET() {
+  const session = await getServerSession(authOptions)
+  try {
+    await dbConnect()
+    const _id = session!.user._id
+    const user = await UserModel.findOne({ _id })
+    if (user) {
+      const username = user.username
+      const email = user.email
+      const LifeTimeHasAccess = user.LifeTimeHasAccess
+      const subscriptionHasAccess = user.subscriptionHasAccess
+      return Response.json({
+        data: { username, email, LifeTimeHasAccess, subscriptionHasAccess },
+        message: 'user details send'
+      })
+    }
+    return Response.json({
+      success: false,
+      message: 'Error finding user details in database'
+    },
+      {
+        status: 400
+      })
+
+  } catch (error) {
+    console.log("Error finding user details in database", error);
+    return Response.json({
+      success: false,
+      message: "Error finding user details in database"
+    },
+      {
+        status: 500
+      })
+
   }
 }

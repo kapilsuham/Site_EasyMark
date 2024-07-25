@@ -70,7 +70,7 @@ const VerifyAccount= ()=> {
     <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Verify now!</h1>
+      <h1 className="text-5xl font-bold text-base-content">Verify now!</h1>
     </div>
     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
@@ -78,13 +78,13 @@ const VerifyAccount= ()=> {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" placeholder="password" className="input input-bordered" {...form.register("password")} required />
+                <input type="password" placeholder="password" className="input input-bordered text-base-content" {...form.register("password")} required />
               </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Verify Code</span>
           </label>
-          <input type="code" placeholder="Code" className="input input-bordered" {...form.register("code")} />
+          <input type="code" placeholder="Code" className="input input-bordered text-base-content" {...form.register("code")} />
           
         </div>
         <div className="form-control lg:mt-3">
