@@ -21,7 +21,7 @@ const Footer = () => {
   </nav> 
   <nav>
     <h6 className="footer-title">Legal</h6> 
-    <a href='/terms&conditions' className="link link-hover">Terms & Conditions</a>
+    <a href='/terms-conditions' className="link link-hover">Terms & Conditions</a>
     <a href='/privacy-policy' className="link link-hover">Privacy policy</a>
     <a href='/license' className="link link-hover">Licensing</a>
   </nav>

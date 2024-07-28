@@ -40,15 +40,7 @@ export default function VerificationEmail({ username, otp }: VerificationEmailPr
         <Row>
           <Text>
             Thank you for registering on {SITE_NAME}. Please use the following verification
-            code to complete your registration:
-          </Text>
-        </Row>
-        <Row>
-          <Text>{otp}</Text>
-        </Row>
-        <Row>
-          <Text>
-            Do't forget to follow Me on twitter <a href="/https://x.com/kapil__paliwal?t=0GbROshSxHMoRlUvHqyxgQ&s=08">kapil</a>
+            code to complete your registration: {otp}
           </Text>
         </Row>
         <Row>
@@ -58,6 +50,11 @@ export default function VerificationEmail({ username, otp }: VerificationEmailPr
           >
             Verify here
           </Button>
+        </Row>
+        <Row>
+          <Text>
+            Do't forget to follow Me on twitter <a href="/https://x.com/kapil__paliwal?t=0GbROshSxHMoRlUvHqyxgQ&s=08">kapil</a>
+          </Text>
         </Row>
       </Section>
     </Html>
