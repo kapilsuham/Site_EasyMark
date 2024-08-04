@@ -9,6 +9,7 @@ const Footer = () => {
         </aside>
         <nav>
           <h6 className="footer-title">EasyMark</h6>
+          <a href='/' className="link link-hover">Home</a>
           <a href='#pricing' className="link link-hover">Pricing</a>
         </nav>
         <nav>

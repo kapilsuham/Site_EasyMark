@@ -27,7 +27,8 @@ const Page = () => {
       const response = await axios.post("/api/add-site", { siteData, param })
       toast(response.data.message)
       router.back()
-    } catch (error) {
+    } catch (error:any) {
+      toast(error?.response.data.message)
       console.log(error);
     }
     finally {
@@ -46,25 +47,25 @@ const Page = () => {
             <div className="form-control">
               <label className="input input-bordered flex items-center gap-2 w-72">
                 Title:
-                <input type="text" className="grow overflow-hidden" placeholder="ShipForever" required {...form.register("title")} />
+                <input type="text" className="grow overflow-hidden max-w-52" placeholder="ShipForever" required {...form.register("title")} />
               </label>
             </div>
             <div className="form-control">
               <label className="input input-bordered flex items-center gap-2 w-72">
                 Home:
-                <input type="text" className="grow overflow-hidden" placeholder="shipforever.io" required {...form.register("home")} />
+                <input type="text" className="grow overflow-hidden max-w-52" placeholder="shipforever.io" required {...form.register("home")} />
               </label>
             </div>
             <div className="form-control">
               <label className="input input-bordered flex items-center gap-2 w-72">
                 Icon:
-                <input type="text" className="grow overflow-hidden" placeholder="Icon Url" {...form.register("icon")} />
+                <input type="text" className="grow overflow-hidden max-w-52" placeholder="Icon Url" {...form.register("icon")} />
               </label>
             </div>
             <div className="form-control">
               <label className="input input-bordered flex items-center gap-2 w-72">
                 Page:
-                <input type="text" className="grow overflow-hidden" placeholder="shipforever.io/kapil" {...form.register("page")} />
+                <input type="text" className="grow overflow-hidden max-w-52" placeholder="shipforever.io/kapil" {...form.register("page")} />
               </label>
             </div>
           </div>

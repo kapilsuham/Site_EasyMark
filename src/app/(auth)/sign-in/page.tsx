@@ -83,7 +83,7 @@ const Page = () => {
               </label>
             </div>
             <div className="form-control">
-              <button type="submit" disabled={isSubmitting} className="btn btn-primary"> {isSubmitting ? (
+              <button type="submit" disabled={isSubmitting} className="btn bg-green-400"> {isSubmitting ? (
                 <>
                   <Loader/>
                 </>
@@ -91,7 +91,7 @@ const Page = () => {
             </div>
             <div className="divider text-base-content">OR</div>
             <div className="form-control">
-              <button disabled={isSubmitting} onClick={GoogleOauth} className="btn btn-primary"> {isSubmitting ? (
+              <button disabled={isSubmitting} onClick={GoogleOauth} className="btn bg-green-400"> {isSubmitting ? (
                 <>
                   <Loader/>
                 </>

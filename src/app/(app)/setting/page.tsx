@@ -1,13 +1,31 @@
 'use client'
 import Avatar from '@/components/Avatar'
+import apiClient from '@/lib/api'
 import axios from 'axios'
 import { signOut } from 'next-auth/react'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import { redirect, useRouter } from 'next/navigation'
 import { useState } from 'react'
+import useSWR from 'swr'
 
 const Page = () => {
   const router = useRouter()
+  const { data:userAccess,isLoading, error } = useSWR("/webhook", (url) => apiClient.get(url))
+  if (error) {
+    return (
+      <div className="text-center m-auto text-xl">Something went wrong!</div>
+    )
+  }
+  if (isLoading) {
+    return (
+      <div className="text-center items-center m-auto">
+        <div className="m-auto min-h-screen loading bg-black loading-spinner loading-lg"></div>
+      </div>
+    )
+  }
+  if (!userAccess?.data.LifeTimeHasAccessGold && !userAccess?.data.LifeTimeHasAccessBasic) {
+    redirect('/pending-payment')
+  }
   const [isSubmitting, setIsSubmitting] = useState(false)
   const resetAccount = async () => {
     // console.log(siteData);
@@ -45,6 +63,12 @@ const Page = () => {
         </div>
         <div className='lg:w-1/3 w-full my-10 items-center'>
           <div className='flex flex-col gap-8'>
+          <div className='flex items-center justify-between mr-3 '>
+              <div>Permanently delete account:</div>
+              <div>
+              <div className='text-xl font-bold'>{userAccess?.data.LifeTimeHasAccessGold?(<div className='text-yellow-500'>Gold</div>):(<div className='text-gray-500'>Basic</div>)}</div>
+              </div>
+            </div>
             <div className='flex items-center gap-5 justify-between'>
               <div>Reset account:</div>
               <div>
@@ -101,13 +125,13 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className='max-w-80 overflow-hidden flex items-center gap-5'>
-              <div>Contact:</div>
-              easymark.kapil@gmail.com
-              </div>
           </div>
         </div>
         <div className='divider'></div>
+            <div className='max-w-80 my-3 overflow-hidden flex items-center gap-5'>
+              <div>Contact:</div>
+              easymark.kapil@gmail.com
+              </div>
         <div className='text-base-content flex gap-3 items-center'>
         <div className="avatar">
                     <div className="w-12  rounded-full">

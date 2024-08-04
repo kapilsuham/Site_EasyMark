@@ -42,7 +42,7 @@ const WaitListButton = () => {
                 <input type="email" placeholder="email" className="input input-bordered text-base-content" {...form.register("email")} required />
               </div>
               <div className="form-control mt-6">
-                <button type="submit" disabled={isSubmitting} className="btn btn-primary"> {isSubmitting ? (
+                <button type="submit" disabled={isSubmitting} className="btn bg-green-400"> {isSubmitting ? (
                   <>
                     <Loader />
                   </>

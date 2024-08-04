@@ -30,7 +30,7 @@ export default function CheckoutButton(data: any) {
   };
   return (
     <>
-      <button disabled={isSubmitting} onClick={() => buyProduct(data)} >{isSubmitting ? (<div className='btn bg-yellow-500 btn-wide'><Loader /></div>) : (<div className='btn btn-wide rounded-lg hover:bg-yellow-400  bg-yellow-500 text-success-content'>Buy Now</div>)}</button>
+      <button disabled={isSubmitting} onClick={() => buyProduct(data)} >{isSubmitting ? (<div className='btn bg-green-400 btn-wide'><Loader /></div>) : (<div className='btn btn-wide rounded-lg hover:bg-yellow-400  bg-green-400 text-success-content'>Buy Now</div>)}</button>
     </>
 
   )

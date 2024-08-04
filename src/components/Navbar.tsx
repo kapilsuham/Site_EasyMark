@@ -12,7 +12,7 @@ const Navbar = () => {
   const user: User = session?.user as User
   const router = useRouter()
   return (
-    <div className="navbar z-50 sticky top-0 bg-base-300">
+    <div className="navbar z-50 sticky top-0 bg-base-200">
       <div className="flex-1 ml-10">
         <div onClick={() => router.push('/')} className="btn btn-ghost w-auto h-auto text-base-content lg:text-xl"><Image width={52} height={62} src="/logo.png" alt="img" />{SITE_NAME}</div>
       </div>

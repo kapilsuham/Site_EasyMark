@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from 'sonner';
 import AuthProvider from "@/(more)/context/AuthProvider";
-import dynamic from 'next/dynamic'
 import PlausibleProvider from "next-plausible";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -27,9 +26,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const CrispWithNoSSR = dynamic(
-    () => import('@/(more)/crisp')
-  )
   return (
     <>
       <html lang="en">

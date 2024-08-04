@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import { getSEOTags } from "@/lib/seo";
 
 export const metadata = getSEOTags({
@@ -11,6 +12,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <div>
     { children }
+    <Footer/>
     </div>
   );
 }

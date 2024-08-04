@@ -20,31 +20,29 @@ export const plan = [
             { id: 2, tag: 'Create mark groups' },
             { id: 3, tag: 'Create site cards' },
             { id: 4, tag: 'Movable mark & site cards' },
+            { id: 5, tag: 'LifeTime Access' },
         ],
         denied: [
-            { id: 5, tag: '32+ themes' },
-            { id: 6, tag: 'Different fonts' },
-            { id: 7, tag: 'Unlimited mark storage(Limit of 2)' },
-            { id: 8, tag: 'Unlimited site card storage(Limit of 5)' },
+            { id: 7, tag: 'Unlimited mark(Limit of 2)' },
+            { id: 8, tag: 'Unlimited site card(Limit of 5)' },
             ],
         popular: false,
-        cuttedPrice: 29,
+        cuttedPrice: 39,
         price: 16,
         mode: 'plan1',
         productId: '424261'
     },
     {
         id: 2,
-        name: "Silver",
+        name: "Gold",
         access: [
             { id: 1, tag: 'Multiple device login' },
             { id: 2, tag: 'Create mark groups' },
             { id: 3, tag: 'Create site cards' },
             { id: 4, tag: 'Movable mark & site cards' },
-            { id: 5, tag: '32+ themes' },
-            { id: 6, tag: 'Different fonts' },
-            { id: 7, tag: 'Unlimited mark storage(Limit of 2)' },
-            { id: 8, tag: 'Unlimited site card storage(Limit of 5)' },
+            { id: 5, tag: 'LifeTime Access' },
+            { id: 7, tag: 'Unlimited mark (No Limit)' },
+            { id: 8, tag: 'Unlimited site card (No Limit)' },
         ],
         denied: [],
         popular: true,
@@ -53,5 +51,6 @@ export const plan = [
         mode: 'plan2',
         productId: ''
     },
+    
 ]
 

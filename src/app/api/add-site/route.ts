@@ -14,25 +14,35 @@ export async function POST(request: Request) {
         // console.log('mmmmm===', param);
         const user = await UserModel.findOne({ email: session?.user.email })
 
-        if (user) {
-            const markFind = user.mark.find((i) => i.title === param.mark)
-            const rank = markFind?.site[markFind?.site.length-1]?.rank ?? 0;
-            const title = siteData?.title || '';
-            const icon = siteData?.icon || '';
-            const page = siteData?.page || '';
-            let home = siteData?.home || '';
-            if (siteData?.home.slice(-1) === '/') {
-                home = siteData?.home.slice(0, -1) || '';
+        const markFind = user?.mark.find((i) => i.title === param.mark)
+        if (user && markFind) {
+            // console.log(Object.keys(markFind.site).length);
+
+            if (user.LifeTimeHasAccessGold || Object.keys(markFind.site).length < 5) {
+                const rank = markFind?.site[markFind?.site.length - 1]?.rank ?? 0;
+                const title = siteData?.title || '';
+                const icon = siteData?.icon || '';
+                const page = siteData?.page || '';
+                let home = siteData?.home || '';
+                if (siteData?.home.slice(-1) === '/') {
+                    home = siteData?.home.slice(0, -1) || '';
+                }
+                const newSite = { title, home, icon, page, rank: rank + 1 }
+                markFind?.site.push(newSite as Site)
+                await user.save()
+                return Response.json(
+                    {
+                        success: true,
+                        message: "updated successfully"
+                    },
+                    { status: 201 })
             }
-            const newSite = { title, home, icon, page, rank:rank + 1 }
-            markFind?.site.push(newSite as Site)
-            await user.save()
             return Response.json(
                 {
-                    success: true,
-                    message: "updated successfully"
+                    success: false,
+                    message: "Plan limit reached"
                 },
-                { status: 201 })
+                { status: 401 })
         }
         return Response.json(
             {

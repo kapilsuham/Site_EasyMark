@@ -87,13 +87,13 @@ const VerifyAccount= ()=> {
           
         </div>
         <div className="form-control lg:mt-3">
-          <button type="submit" disabled={isSubmitting} className="btn btn-primary"> {isSubmitting?(
+          <button type="submit" disabled={isSubmitting} className="btn bg-green-400"> {isSubmitting?(
           <>
           <Loader/>
           </>
         ):("Submit")}</button>
         </div>
-          <button className="btn btn-primary" disabled={isSubmitting} onClick={()=>resendEmail()}>
+          <button className="btn bg-green-400" disabled={isSubmitting} onClick={()=>resendEmail()}>
       Resend Code</button>
       </form>
     </div>

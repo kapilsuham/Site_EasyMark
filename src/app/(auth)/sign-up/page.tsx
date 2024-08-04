@@ -98,7 +98,7 @@ export default function Page() {
               <input type="password" placeholder="password" className="input input-bordered text-base-content" {...form.register("password")} required />
             </div>
             <div className="form-control mt-6">
-              <button type="submit" disabled={isSubmitting} className="btn btn-primary"> {isSubmitting ? (
+              <button type="submit" disabled={isSubmitting} className="btn bg-green-400"> {isSubmitting ? (
                 <>
                   <Loader />
                 </>

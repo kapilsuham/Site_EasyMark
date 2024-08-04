@@ -85,13 +85,13 @@ const Page = () => {
               <input autoComplete="off" type="code" placeholder="Code" className="input input-bordered text-base-content" {...form.register("code")} />
             </div>
             <div className="form-control mt-6">
-              <button disabled={isSubmitting} type="submit" className="btn btn-primary"> {isSubmitting ? (
+              <button disabled={isSubmitting} type="submit" className="btn bg-green-400"> {isSubmitting ? (
                 <>
                   <Loader />
                 </>
               ) : ("Submit")}</button>
             </div>
-            <button className="btn btn-primary" disabled={isSubmitting} onClick={() => resendEmail()}>
+            <button className="btn bg-green-400" disabled={isSubmitting} onClick={() => resendEmail()}>
               Resend Code</button>
           </form>
         </div>

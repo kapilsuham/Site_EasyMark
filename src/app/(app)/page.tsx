@@ -1,15 +1,14 @@
 import { getServerSession } from 'next-auth'
-import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import { authOptions } from '../api/auth/[...nextauth]/options'
 import Hero from '@/components/Hero'
 import Problem from '@/components/Problem'
 import Pricing from '@/components/Pricing'
-import Faq from '@/components/Faq'
 import Footer from '@/components/Footer'
 import Me from '@/components/Me'
 import FeaturesListicle from '@/components/FeaturesListicle'
 import TestimonialSingle from '@/components/TestimonialSingle'
+import FAQ from '@/components/FAQ'
 
 const Page = async () => {
 
@@ -25,7 +24,7 @@ const Page = async () => {
       <TestimonialSingle/>
       <Pricing />
       <Me />
-      <Faq />
+      <FAQ />
       <Footer />
     </div>
   )

@@ -20,7 +20,7 @@ const Avatar = () => {
                 </div>
                 <div className="avatar placeholder">
                     <div className="w-12 bg-neutral text-neutral-content">
-                        <span>+99</span>
+                        <span>+390</span>
                     </div>
                 </div>
             </div>

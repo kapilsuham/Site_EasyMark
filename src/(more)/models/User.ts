@@ -7,7 +7,8 @@ export interface User extends Document {
     verifyCode: string,
     verifyCodeExpiry: Date,
     isVerified: boolean,
-    LifeTimeHasAccess: boolean,
+    LifeTimeHasAccessGold: boolean,
+    LifeTimeHasAccessBasic: boolean,
     createdAt: Date,
 }
 
@@ -29,6 +30,9 @@ const SiteSchema: Schema<Site> = new Schema({
         required: [true, 'Home is required']
     },
     page: {
+        type: String,
+    },
+    icon: {
         type: String,
     },
     rank: {
@@ -88,7 +92,11 @@ const UserSchema: Schema<User> = new Schema({
         type: Boolean,
         default: false,
     },
-    LifeTimeHasAccess: {
+    LifeTimeHasAccessGold: {
+        type: Boolean,
+        default: false,
+    },
+    LifeTimeHasAccessBasic: {
         type: Boolean,
         default: false,
     },

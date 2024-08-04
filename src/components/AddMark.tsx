@@ -24,7 +24,8 @@ const AddMark = () => {
       const response = await axios.post("/api/add-mark", siteData)
       toast(response.data.message)
       router.push(`/mark/${siteData?.title}`)
-    } catch (error) {
+    } catch (error:any) {
+      toast(error?.response.data.message)
       console.log(error);
     }
     finally {

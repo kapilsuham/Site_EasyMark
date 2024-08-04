@@ -14,10 +14,13 @@ export async function POST(request: Request) {
         const user = await UserModel.findOne({ email: session?.user.email })
         if (user) {
             const markFind = user.mark.find((i) => i.title === data.title)
+            
             if (!markFind) {
-                const rank = user?.mark.length ?? 0;
-                const title = data?.title;
-                const site: any = [];
+                if (user.LifeTimeHasAccessGold || Object.keys(user.mark).length < 2) {
+
+                    const rank = user?.mark.length ?? 0;
+                    const title = data?.title;
+                    const site: any = [];
                 const newMark = { title, site, rank }
                 user?.mark?.push(newMark as Mark)
                 await user.save()
@@ -27,8 +30,15 @@ export async function POST(request: Request) {
                         message: "updated successfully"
                     },
                     { status: 201 })
+                }
+                return Response.json(
+                    {
+                        success: false,
+                        message: "Plan limit reached"
+                    },
+                    { status: 401 })
             }
-            return Response.json(
+                return Response.json(
                 {
                     success: false,
                     message: "Mark already exists"

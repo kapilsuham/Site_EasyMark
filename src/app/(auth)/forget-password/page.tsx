@@ -60,7 +60,7 @@ const Page = () => {
 
 
             <div className="form-control mt-6">
-              <button type="submit" disabled={isSubmitting}  className="btn btn-primary"> {isSubmitting ? (
+              <button type="submit" disabled={isSubmitting}  className="btn bg-green-400"> {isSubmitting ? (
                 <>
                   <Loader/>
                 </>
