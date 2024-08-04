@@ -4,7 +4,9 @@ import apiClient from '@/lib/api'
 import useSWR from 'swr'
 
 const ProfileDrawer = () => {
-  const { data, error } = useSWR("/webhook", (url) => apiClient.get(url))
+  const { data, error } = useSWR("/webhook", (url) => apiClient.get(url),{
+    revalidateOnFocus:false
+  })
   // console.log(data?.data);
   // console.log(error);
 

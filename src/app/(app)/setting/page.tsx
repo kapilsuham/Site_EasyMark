@@ -10,7 +10,9 @@ import useSWR from 'swr'
 const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
-  const { data:userAccess,isLoading, error } = useSWR("/webhook", (url) => apiClient.get(url))
+  const { data:userAccess,isLoading, error } = useSWR("/webhook", (url) => apiClient.get(url),{
+    revalidateOnFocus:false
+  })
   if (error) {
     return (
       <div className="text-center m-auto text-xl">Something went wrong!</div>

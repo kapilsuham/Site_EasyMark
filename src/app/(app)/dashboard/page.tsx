@@ -5,7 +5,9 @@ import { redirect } from 'next/navigation'
 import useSWR from 'swr'
 
 const Page = () => {
-  const { data:userAccess, isLoading,error } = useSWR("/webhook", (url) => apiClient.get(url))
+  const { data:userAccess, isLoading,error } = useSWR("/webhook", (url) => apiClient.get(url),{
+    revalidateOnFocus:false
+  })
   if (error) {
     return (
       <div className="text-center m-auto text-xl">Something went wrong!</div>

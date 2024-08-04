@@ -11,8 +11,12 @@ import { toast } from 'sonner'
 const Sidebar = () => {
     const [ham, setham] = useState(true)
     const router = useRouter()
-    const { data: userAccess, error } = useSWR("/webhook", (url) => apiClient.get(url))
-    const { data, mutate } = useSWR("/get-mark", (url) => apiClient.get(url))
+    const { data: userAccess, error } = useSWR("/webhook", (url) => apiClient.get(url),{
+        revalidateOnFocus:false
+    })
+    const { data, mutate } = useSWR("/get-mark", (url) => apiClient.get(url),{
+        revalidateOnFocus:false,
+    })
     const sorted = data?.data.sort((a: any, b: any) => a.rank - b.rank);
     const moveMark = async (siteData: object) => {
         // console.log(siteData);
