@@ -3,6 +3,7 @@ import { authOptions } from '../../api/auth/[...nextauth]/options';
 import { redirect } from 'next/navigation';
 import { getSEOTags } from "@/lib/seo";
 import { Metadata } from "next";
+import Sidebar from '@/components/Sidebar';
 
 export const metadata:Metadata = getSEOTags({
   title: 'Dashboard',
@@ -20,6 +21,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   }
   return (
     <div className="flex flex-col min-h-screen bg-base-200">
+      <Sidebar />
       {children}
     </div>
   );

@@ -1,4 +1,5 @@
 'use client'
+
 import { verificationCodeSchema } from "@/(more)/schema/verificationCodeSchema"
 import { ApiResponse } from "@/(more)/types/ApiResponse"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -81,7 +82,7 @@ const Page = () => {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input type="code" placeholder="Code" className="input input-bordered text-base-content" {...form.register("code")} />
+              <input autoComplete="off" type="code" placeholder="Code" className="input input-bordered text-base-content" {...form.register("code")} />
             </div>
             <div className="form-control mt-6">
               <button disabled={isSubmitting} type="submit" className="btn btn-primary"> {isSubmitting ? (

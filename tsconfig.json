@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/lib/seo.js", "src/app/(auth)/sign-in/layout.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/lib/seo.js", "src/app/(auth)/sign-in/layout.js", "src/components/FeaturesListicle.tsx"],
   "exclude": ["node_modules"]
 }

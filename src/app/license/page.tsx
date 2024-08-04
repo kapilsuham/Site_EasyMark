@@ -61,41 +61,41 @@ const Page = () => {
           >
             {`License Agreement
 
-Effective Date: July 6, 2024
-
-Thank you for using ShipForever!
-
-This License Agreement ("Agreement") governs your use of the JavaScript code boilerplate provided by ShipForever ("we", "us", or "our") on our website https://shipforever.io ("Site").
+Effective Date: August 3, 2024
 
 1. License Grant
 
-Subject to your compliance with these terms, ShipForever grants you a limited, non-exclusive, non-transferable license to use the JavaScript code boilerplate solely for the purpose of developing and launching your startup applications.
+By using EasyMark (https://easymark.co), you are granted a non-exclusive, non-transferable license to access and use the website and its services for personal and non-commercial purposes.
 
-2. Restrictions
+2. User Data
 
-You may not:
+EasyMark collects and processes the following user data: name, email, LemonSqueezy information, and payment details. We also use web cookies for non-personal data collection.
 
-- Sell, sublicense, rent, lease, or otherwise commercialize the JavaScript code boilerplate.
-- Modify, adapt, alter, translate, or create derivative works from the JavaScript code boilerplate.
-- Reverse engineer, decompile, disassemble, or attempt to derive the source code of the JavaScript code boilerplate.
+3. Purpose of Data Collection
 
-3. Ownership
+The data collected is used solely for order processing and enhancing your experience on our site.
 
-ShipForever retains all rights, title, and interest in and to the JavaScript code boilerplate, including all intellectual property rights.
+4. Data Sharing
 
-4. Privacy and Data Collection
+Your data is not shared with any third parties.
 
-Your use of the JavaScript code boilerplate is subject to our Privacy Policy regarding the collection, use, and disclosure of personal information. Please refer to our Privacy Policy available at https://shipforever.io/privacy-policy.
+5. Children's Privacy
 
-5. Updates
+We do not collect data from individuals under the age of 13.
 
-ShipForever may update this License Agreement from time to time. We will notify you of any changes by email.
+6. Policy Updates
 
-6. Contact Us
+Any changes to this License Agreement will be communicated to users via email.
 
-If you have any questions about this License Agreement, please contact us at shipforever.kapil@gmail.com.
+7. Contact Information
 
-By using the JavaScript code boilerplate, you agree to be bound by this License Agreement. If you do not agree with these terms, please do not use the JavaScript code boilerplate from ShipForever.`}
+For any questions or concerns, please contact us at easymark.kapil@gmail.com.
+
+8. Acceptance
+
+By using EasyMark, you agree to the terms of this License Agreement.
+
+EasyMark Team`}
           </pre>
         </div>
       </main>

@@ -58,46 +58,40 @@ export const metadata: Metadata = getSEOTags({
         >
           {`Privacy Policy
 
-Effective Date: July 6, 2024
+Effective Date: August 3, 2024
 
-ShipForever ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website https://shipforever.io, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+1. Introduction
 
-1. Information We Collect
+Welcome to EasyMark, a bookmark managing and productivity enhancing site. We value your privacy and are committed to protecting your personal information.
 
-We may collect personal information that you voluntarily provide to us when expressing an interest in obtaining information about us or our products and services, when participating in activities on the Site, or otherwise contacting us.
+2. Information We Collect
 
-The personal information that we collect depends on the context of your interactions with us and the Site, and may include the following:
+- Personal Information: Name, email address, LemonSqueezy information, payment details.
+- Non-Personal Information: Web cookies.
 
-- Name
-- Email address
-- Payment information
-- User startup information
+3. Purpose of Data Collection
 
-In addition to personal information, we may also collect non-personal information through web cookies. This information is used for the purpose of order processing and to enhance your experience on our Site.
+We collect your information for order processing and to improve your experience on our site.
 
-2. Use of Your Information
+4. Data Sharing
 
-The information we collect is used for the following purposes:
+We do not share your personal information with any third parties.
 
-- To process transactions
-- To send you emails
-- To improve our website
+5. Children's Privacy
 
-3. Disclosure of Your Information
+We do not collect personal information from children under the age of 13.
 
-We do not share your personal information with third parties. We may disclose your information to comply with laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.
+6. Changes to This Privacy Policy
 
-4. Children's Privacy
+Any updates to this Privacy Policy will be communicated to you via email.
 
-We do not knowingly collect any personal information from children under the age of 13. If you are under 13, please do not submit any personal information through the Site. We encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personal information through the Site without their permission.
+7. Contact Us
 
-5. Updates to This Privacy Policy
+If you have any questions or concerns, please contact us at easymark.kapil@gmail.com.
 
-We may update this Privacy Policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.
+Thank you for using EasyMark!
 
-Contact Us
-
-If you have any questions about this Privacy Policy, please contact us at shipforever.kapil@gmail.com.`}
+EasyMark Team`}
         </pre>
       </div>
     </main>

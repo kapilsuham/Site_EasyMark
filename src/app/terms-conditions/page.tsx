@@ -56,39 +56,43 @@ export const metadata:Metadata = getSEOTags({
           className="leading-relaxed whitespace-pre-wrap"
           style={{ fontFamily: "sans-serif" }}
         >
-          {`Terms of Service
+          {`Terms & Services
 
-Effective Date: July 6, 2024
+Effective Date: August 3, 2024
 
-Welcome to ShipForever!
+1. Introduction
 
-These Terms of Service ("Terms") govern your use of the ShipForever website (https://shipforever.io) and any related services provided by ShipForever ("we", "us" or "our").
+Welcome to EasyMark (https://easymark.co), a bookmark managing and productivity enhancing site. By accessing or using our website, you agree to these Terms & Services.
 
-By accessing or using our website, you agree to comply with these Terms. If you do not agree with these Terms, you may not use our website.
+2. Access and Use
 
-1. Description of Service
+Upon purchasing a package, you gain access to paid features on our site. You do not have the right to resell or redistribute any of our services or content. All purchases are non-refundable.
 
-ShipForever provides a JavaScript code boilerplate designed to accelerate the launch of startups.
+3. User Data
 
-2. Ownership and Usage
+We collect the following user data: name, email, LemonSqueezy information, and payment details. We also use web cookies for non-personal data collection. For more details, please refer to our Privacy Policy at [Privacy Policy](https://easymark.co/privacy-policy).
 
-Users who purchase our packages are granted the right to download and use the code to create applications. You own the code you create but may not resell it. All purchases are non-refundable.
+4. Ownership
 
-3. Collection of User Data
+All content and features on EasyMark remain the property of EasyMark. Your access is limited to personal use only.
 
-We collect personal information such as name, email, and payment details, as well as non-personal information through web cookies. For details, please refer to our Privacy Policy [here](https://shipforever.io/privacy-policy).
+5. Governing Law
 
-4. Governing Law
+These Terms & Services are governed by the laws of India.
 
-These Terms are governed by the laws of India.
+6. Updates to Terms
 
-5. Updates to Terms
+Any changes to these Terms & Services will be communicated to users via email.
 
-We may update these Terms from time to time. We will notify you of any changes by email.
+7. Contact Information
 
-Contact Us
+For any questions or concerns, please contact us at easymark.kapil@gmail.com.
 
-If you have any questions about these Terms, please contact us at shipforever.kapil@gmail.com.`}
+8. Acceptance
+
+By using EasyMark, you agree to comply with these Terms & Services.
+
+EasyMark Team`}
 
         </pre>
       </div>

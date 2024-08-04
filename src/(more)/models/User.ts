@@ -1,84 +1,98 @@
-import mongoose,{Schema,Document} from "mongoose";
-export interface User extends Document{
-    username:string,
-    email:string,
-    password:string,
-    verifyCode:string,
-    verifyCodeExpiry:Date,
-    isVerified:boolean, 
-    LifeTimeHasAccess:boolean,       // for one-time payment models
-    subscriptionHasAccess:boolean,  // for subscription payment models
-    userImage:string,
-    createdAt:Date,
+import mongoose, { Schema, Document } from "mongoose";
+export interface User extends Document {
+    username: string,
+    email: string,
+    mark: Mark[],
+    password: string,
+    verifyCode: string,
+    verifyCodeExpiry: Date,
+    isVerified: boolean,
+    LifeTimeHasAccess: boolean,
+    createdAt: Date,
 }
-const UserSchema:Schema<User>=new Schema({
-    username:{
+
+export interface Site extends Document {
+    title: string,
+    home: string,
+    page: string,
+    icon:string,
+    rank: number
+}
+
+const SiteSchema: Schema<Site> = new Schema({
+    title: {
         type: String,
-        required:[true,'username is required'],
-        trim:true,
-        lowercase:true,
-        unique:true
-    } ,
-    email:{
-        type:String,
-        required:[true,"email is required"],
-        unique:true,
-        trim:true,
-        lowercase:true,
-        match:[/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g,"please use a valid email"]
+        required: [true, "Title is required"]
     },
-    password:{
-        type:String,
-        required:[true,"password is required"]
+    home: {
+        type: String,
+        required: [true, 'Home is required']
     },
-    verifyCode:{
-        type:String,
-        required:[true,'Verify Code is required']
+    page: {
+        type: String,
     },
-    verifyCodeExpiry:{
-        type:Date,
-        required:[true,'verify Code Expiry is required']
+    rank: {
+        type: Number,
+        required: [true, 'rank is required']
     },
-    isVerified:{
-        type:Boolean,
-        default:false,
+}, { timestamps: true })
+
+export interface Mark extends Document {
+    title: string,
+    site:Site[],
+    rank: number
+}
+
+const MarkSchema: Schema<Mark> = new Schema({
+    title: {
+        type: String,
+        required: [true, "Title is required"]
     },
-    LifeTimeHasAccess:{
-        type:Boolean,
-        default:false,
+    site: [SiteSchema],
+    rank: {
+        type: Number,
+        required: [true, 'rank is required']
     },
-   
-    subscriptionHasAccess:{
-        type:Boolean,
-        default:false
+}, { timestamps: true })
+
+const UserSchema: Schema<User> = new Schema({
+    username: {
+        type: String,
+        required: [true, 'username is required'],
+        trim: true,
+        lowercase: true,
+        unique: true
     },
-    createdAt:{
-        type:Date,
-        default:Date.now()
+    email: {
+        type: String,
+        required: [true, "email is required"],
+        unique: true,
+        trim: true,
+        lowercase: true,
+        match: [/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g, "please use a valid email"]
     },
-    
-})
-const UserModel=(mongoose.models.User as mongoose.Model<User>)|| mongoose.model<User>("User",UserSchema)
+    mark: [MarkSchema],
+    password: {
+        type: String,
+        required: [true, "password is required"]
+    },
+    verifyCode: {
+        type: String,
+        required: [true, 'Verify Code is required']
+    },
+    verifyCodeExpiry: {
+        type: Date,
+        required: [true, 'verify Code Expiry is required']
+    },
+    isVerified: {
+        type: Boolean,
+        default: false,
+    },
+    LifeTimeHasAccess: {
+        type: Boolean,
+        default: false,
+    },
+}, { timestamps: true })
+
+const UserModel = (mongoose.models.User as mongoose.Model<User>) || mongoose.model<User>("User", UserSchema)
 export default UserModel
-
-
-
-
-/////////////////////////////////// for waitlist email
-
-
-
-
-// export interface UserWaitlist extends Document{
-//     email:string,
-// }
-// const UserSchema:Schema<UserWaitlist>=new Schema({
-//     email:{
-//         type:String,
-//         required:[true,"email is required"],
-//         unique:true,
-//         match:[/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g,"please use a valid email"]
-//     }
-// })
-// const UserModel=(mongoose.models.User as mongoose.Model<UserWaitlist>)|| mongoose.model<UserWaitlist>("UserWaitlist",UserSchema)
-// export default UserModel

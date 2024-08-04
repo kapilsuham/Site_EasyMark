@@ -1,4 +1,5 @@
 'use client'
+
 import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
@@ -45,7 +46,7 @@ const Page = () => {
                 <label className="label">
                   <span className="label-text">Username</span>
                 </label>
-                <input type="username" placeholder="Username" className="input input-bordered text-base-content" {...form.register("username")}  />
+                <input autoComplete="off" type="username" placeholder="Username" className="input input-bordered text-base-content" {...form.register("username")}  />
               </div></div>
 
               <input type="radio" name="my_tabs_1" role="tab" className="tab px-14" aria-label="Email" />
@@ -53,7 +54,7 @@ const Page = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="email" className="input input-bordered text-base-content" {...form.register("email")}  />
+                <input type="email" autoComplete="off" placeholder="email" className="input input-bordered text-base-content" {...form.register("email")}  />
               </div></div>
             </div>
 

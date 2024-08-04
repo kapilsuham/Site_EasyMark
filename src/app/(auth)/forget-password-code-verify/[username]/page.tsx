@@ -83,7 +83,7 @@ const VerifyAccount= ()=> {
           <label className="label">
             <span className="label-text">Verify Code</span>
           </label>
-          <input type="code" placeholder="Code" className="input input-bordered text-base-content" {...form.register("code")} />
+          <input autoComplete="off" type="code" placeholder="Code" className="input input-bordered text-base-content" {...form.register("code")} />
           
         </div>
         <div className="form-control lg:mt-3">

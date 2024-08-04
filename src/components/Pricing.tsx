@@ -7,12 +7,12 @@ const Pricing = () => {
     // console.log(typeof(plan));
     const router = useRouter()
     return (
-        <div id='pricing' className='pt-20 bg-secondary-content'>
+        <div id='pricing' className='pt-20 bg-secondary-content text-base-content'>
             <div>
                 <div className='text-yellow-400 text-2xl lg:text-5xl font-extrabold text-center mb-5'>Pricing</div>
                 <div className="mx-auto mb-12 max-w-2xl text-center lg:max-w-5xl">
                     <h1 className="text-3xl font-bold tracking-tight text-base-content sm:text-6xl lg:text-7xl">
-                        Save hours of repetitive code, ship startup, grow fast
+                        Improve your productivity, with EasyMark
                     </h1>
                 </div>
             </div>
@@ -22,7 +22,7 @@ const Pricing = () => {
                         {i.popular ? (<div className='m-auto w-1/3 font-extrabold border-yellow-400 border-4 rounded-lg text-center'>Popular</div>) : (<div className='mt-8'></div>)}
                         <div className="card-body">
                             <span className="mb-2 block pt-6 text-4xl font-extrabold text-yellow-400">{i?.name}</span>
-                            <span className="flex items-end text-white">
+                            <span className="flex items-end text-base-content">
                                 <span className="text-4xl text-base-content font-extrabold leading-none">{i.cuttedPrice ? (<span className='text-2xl line-through'>{"$" + i.cuttedPrice}</span>) : (null)} ${i.price ? (i.price) : (null)}<span className='text-base'> USD </span>
                                 </span>
                             </span>
