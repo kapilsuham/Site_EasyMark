@@ -41,7 +41,7 @@ export async function POST(req: Request) {
           await dbConnect()
           const user = await UserModel.findOne({ email, isVerified: true })
           if (user) {
-            user. = true
+            user.LifeTimeHasAccessGold = true
             await user.save()
             console.log('===============order_paid');
           }
@@ -65,7 +65,7 @@ export async function POST(req: Request) {
         await dbConnect()
         const user = await UserModel.findOne({ email, isVerified: true })
         if (user) {
-          user. = false
+          user.LifeTimeHasAccessGold = false
           user.LifeTimeHasAccessBasic = false
           await user.save()
           console.log('===================subscription_is_expired');
@@ -79,7 +79,7 @@ export async function POST(req: Request) {
         await dbConnect()
         const user = await UserModel.findOne({ email, isVerified: true })
         if (user) {
-          user. = false
+          user.LifeTimeHasAccessGold = false
           user.LifeTimeHasAccessBasic = false
           await user.save()
           console.log('===============subscription_is_cancelled');
