@@ -103,10 +103,10 @@ export async function GET() {
     if (user) {
       const username = user.username
       const email = user.email
-      const  = user.
+      const LifeTimeHasAccessGold = user.LifeTimeHasAccessGold
       const LifeTimeHasAccessBasic = user.LifeTimeHasAccessBasic
       return Response.json({
-        data: { username, email, , LifeTimeHasAccessBasic },
+        data: { username, email, LifeTimeHasAccessGold, LifeTimeHasAccessBasic },
         message: 'user details send'
       })
     }
