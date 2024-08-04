@@ -1,5 +1,4 @@
 'use client'
-import Avatar from '@/components/Avatar'
 import apiClient from '@/lib/api'
 import axios from 'axios'
 import { signOut } from 'next-auth/react'
@@ -9,8 +8,8 @@ import { useState } from 'react'
 import useSWR from 'swr'
 
 const Page = () => {
-  const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const router = useRouter()
   const { data:userAccess,isLoading, error } = useSWR("/webhook", (url) => apiClient.get(url))
   if (error) {
     return (
