@@ -8,15 +8,15 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL as string),
   title: {
-    default: "Grow Your Startups in Minutes,Save Months | ShipForever",
-    template: "%s | ShipForever"
+    default: "Manage you bookmarks | EasyMark",
+    template: "%s | EasyMark"
   },
-  description: "Grow startups in minutes save months",
+  description: "Manage you bookmarks",
   twitter: {
     card: "summary_large_image",
-    site: 'shipforever.com',
-    title: 'Grow Your Startups in Minutes,Save Months',
-    description: 'ShipForever | Grow Your Startups in Minutes,Save Months',
+    site: 'easymark.co',
+    title: 'Manage you bookmarks',
+    description: 'EasyMark | Manage you bookmarks',
   }
 
 };
@@ -32,7 +32,6 @@ export default function RootLayout({
         {/* <head>
         <PlausibleProvider domain='shipforever.com' trackLocalhost={true} enabled={true}/>
         </head> */}
-        {/* <CrispWithNoSSR /> */}
         <AuthProvider >
           <body className={inter.className}>
             {children}
