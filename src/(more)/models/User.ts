@@ -7,7 +7,7 @@ export interface User extends Document {
     verifyCode: string,
     verifyCodeExpiry: Date,
     isVerified: boolean,
-    LifeTimeHasAccessGold: boolean,
+    : boolean,
     LifeTimeHasAccessBasic: boolean,
     createdAt: Date,
 }
@@ -92,7 +92,7 @@ const UserSchema: Schema<User> = new Schema({
         type: Boolean,
         default: false,
     },
-    LifeTimeHasAccessGold: {
+    : {
         type: Boolean,
         default: false,
     },

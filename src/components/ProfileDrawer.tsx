@@ -25,8 +25,8 @@ const ProfileDrawer = () => {
           </div>
           <div className='container border border-base-content py-8 px-5 rounded-lg'>
             <div className='text-2xl text-center m-5'>Details</div>
-            <div className='text-base-content my-2'><span className='font-bold'>Onetime-Payment:</span> {data?.data?.LifeTimeHasAccess ? ("Access") : ("Not-Access")}</div>
-            <div className='text-base-content my-2'><span className='font-bold'>Subscription: </span>{data?.data?.subscriptionHasAccess ? ("Access") : ("Not-Access")}</div>
+            <div className='text-base-content my-2'><span className='font-bold'>Onetime-Payment:</span> {data?.data?.LifeTimeHasAccessGold ? ("Access") : ("Not-Access")}</div>
+            <div className='text-base-content my-2'><span className='font-bold'>Subscription: </span>{data?.data?.LifeTimeHasAccessBasic ? ("Access") : ("Not-Access")}</div>
           </div>
         </ul>
       </div>

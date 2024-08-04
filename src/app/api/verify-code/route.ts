@@ -20,7 +20,7 @@ export async function POST(request: Request) {
         if (user.isVerified) {
             if (isCodeValid && isCodeExpired) {
                 user.isVerified = true,
-                    user.LifeTimeHasAccess = true
+                    user.LifeTimeHasAccessGold = true
                 await user.save()
 
                 return Response.json({

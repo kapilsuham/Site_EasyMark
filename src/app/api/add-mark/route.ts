@@ -16,7 +16,7 @@ export async function POST(request: Request) {
             const markFind = user.mark.find((i) => i.title === data.title)
             
             if (!markFind) {
-                if (user.LifeTimeHasAccessGold || Object.keys(user.mark).length < 2) {
+                if (user. || Object.keys(user.mark).length < 2) {
 
                     const rank = user?.mark.length ?? 0;
                     const title = data?.title;

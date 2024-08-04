@@ -37,11 +37,11 @@ export async function POST(req: Request) {
       const isSuccessful = body.data.attributes.status === "paid";
 
       if (isSuccessful) {
-        if (body.meta.custom_data.subscriptionType === 'LifeTimeHasAccessGold') {
+        if (body.meta.custom_data.subscriptionType === '') {
           await dbConnect()
           const user = await UserModel.findOne({ email, isVerified: true })
           if (user) {
-            user.LifeTimeHasAccessGold = true
+            user. = true
             await user.save()
             console.log('===============order_paid');
           }
@@ -65,7 +65,7 @@ export async function POST(req: Request) {
         await dbConnect()
         const user = await UserModel.findOne({ email, isVerified: true })
         if (user) {
-          user.LifeTimeHasAccessGold = false
+          user. = false
           user.LifeTimeHasAccessBasic = false
           await user.save()
           console.log('===================subscription_is_expired');
@@ -79,7 +79,7 @@ export async function POST(req: Request) {
         await dbConnect()
         const user = await UserModel.findOne({ email, isVerified: true })
         if (user) {
-          user.LifeTimeHasAccessGold = false
+          user. = false
           user.LifeTimeHasAccessBasic = false
           await user.save()
           console.log('===============subscription_is_cancelled');
@@ -103,10 +103,10 @@ export async function GET() {
     if (user) {
       const username = user.username
       const email = user.email
-      const LifeTimeHasAccessGold = user.LifeTimeHasAccessGold
+      const  = user.
       const LifeTimeHasAccessBasic = user.LifeTimeHasAccessBasic
       return Response.json({
-        data: { username, email, LifeTimeHasAccessGold, LifeTimeHasAccessBasic },
+        data: { username, email, , LifeTimeHasAccessBasic },
         message: 'user details send'
       })
     }

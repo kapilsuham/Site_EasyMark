@@ -18,7 +18,7 @@ export async function POST(request: Request) {
         if (user && markFind) {
             // console.log(Object.keys(markFind.site).length);
 
-            if (user.LifeTimeHasAccessGold || Object.keys(markFind.site).length < 5) {
+            if (user. || Object.keys(markFind.site).length < 5) {
                 const rank = markFind?.site[markFind?.site.length - 1]?.rank ?? 0;
                 const title = siteData?.title || '';
                 const icon = siteData?.icon || '';

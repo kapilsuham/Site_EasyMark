@@ -5,12 +5,12 @@ export async function POST(request: Request) {
     await dbConnect()
     try {
         const { username, password } = await request.json()        
-        const user = await UserModel.findOne({ username, isVerified: true,LifeTimeHasAccess:true })
+        const user = await UserModel.findOne({ username, isVerified: true,LifeTimeHasAccessGold:true })
         
         if (user) {
             const hashedPassword = await bcrypt.hash(password, 10)
             user.password = hashedPassword
-            user.LifeTimeHasAccess=false
+            user.LifeTimeHasAccessGold=false
             await user.save()
         }
 
