@@ -54,7 +54,7 @@ const Page = () => {
     }
     form.reset(defaults);
     // console.log(defaults);
-}, [form.reset]);
+}, [form.reset,form, param?.mark,searchHome,searchIcon,searchPage]);
   return (
     <div className='bg-base-200 lg:absolute lg:w-5/6 right-0 p-10 text-base-content min-h-screen'>
       <div className="mb-10 justify-center text-2xl font-semibold items-center">

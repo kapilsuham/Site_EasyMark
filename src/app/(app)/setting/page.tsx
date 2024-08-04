@@ -10,6 +10,7 @@ import useSWR from 'swr'
 
 const Page = () => {
   const router = useRouter()
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const { data:userAccess,isLoading, error } = useSWR("/webhook", (url) => apiClient.get(url))
   if (error) {
     return (
@@ -26,7 +27,6 @@ const Page = () => {
   if (!userAccess?.data.LifeTimeHasAccessGold && !userAccess?.data.LifeTimeHasAccessBasic) {
     redirect('/pending-payment')
   }
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const resetAccount = async () => {
     // console.log(siteData);
     try {
