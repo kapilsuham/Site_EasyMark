@@ -29,7 +29,7 @@ export const plan = [
         popular: false,
         cuttedPrice: 39,
         price: 16,
-        mode: 'plan1',
+        mode: 'LifeTimeHasAccessBasic',
         productId: '424261'
     },
     {
@@ -48,7 +48,7 @@ export const plan = [
         popular: true,
         cuttedPrice: 49,
         price: 25,
-        mode: 'plan2',
+        mode: 'LifeTimeHasAccessGold',
         productId: ''
     },
     

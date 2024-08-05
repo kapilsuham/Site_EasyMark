@@ -37,7 +37,7 @@ export async function POST(req: Request) {
       const isSuccessful = body.data.attributes.status === "paid";
 
       if (isSuccessful) {
-        if (body.meta.custom_data.subscriptionType === '') {
+        if (body.meta.custom_data.subscriptionType === 'LifeTimeHasAccessGold') {
           await dbConnect()
           const user = await UserModel.findOne({ email, isVerified: true })
           if (user) {

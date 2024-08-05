@@ -11,6 +11,8 @@ import { ApiResponse } from "@/(more)/types/ApiResponse"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { toast } from "sonner"
 import Loader from "@/components/Loader"
+import Image from "next/image"
+import { SITE_NAME } from "@/app/ConfigApp"
 
 export default function Page() {
   const [username, setUsername] = useState('')
@@ -73,6 +75,10 @@ export default function Page() {
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
+          <div className="flex text-xl font-bold items-center m-auto cursor-pointer gap-2">
+              <Image src='https://lemonsqueezy.imgix.net/design/112348/e14b4f14-f29c-4d19-83de-104808f7eda6.png?fit=clip&h=100&ixlib=php-3.3.1&w=100&s=3724ef4df78ce51df6f700522edee435' height={50} width={50} alt="logo" />
+              <span className="text-black">{SITE_NAME}</span>
+            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Username</span>
@@ -98,7 +104,7 @@ export default function Page() {
               <input type="password" placeholder="password" className="input input-bordered text-base-content" {...form.register("password")} required />
             </div>
             <div className="form-control mt-6">
-              <button type="submit" disabled={isSubmitting} className="btn bg-green-400"> {isSubmitting ? (
+              <button type="submit" disabled={isSubmitting} className="btn bg-green-500"> {isSubmitting ? (
                 <>
                   <Loader />
                 </>

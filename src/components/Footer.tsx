@@ -10,7 +10,7 @@ const Footer = () => {
         <nav>
           <h6 className="footer-title">EasyMark</h6>
           <a href='/' className="link link-hover">Home</a>
-          <a href='#pricing' className="link link-hover">Pricing</a>
+          <a href='/#pricing' className="link link-hover">Pricing</a>
         </nav>
         <nav>
           <h6 className="footer-title">Links</h6>
@@ -26,7 +26,7 @@ const Footer = () => {
         </nav>
         <nav>
           <h6 className="footer-title">More</h6>
-          <a href='#pricing' className="link link-hover">ShipForever</a>
+          <a href='/#pricing' className="link link-hover">ShipForever</a>
         </nav>
       </footer>
   )

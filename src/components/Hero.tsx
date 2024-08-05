@@ -15,11 +15,11 @@ const Hero = () => {
                                     with EasyMark
                                 </div>
                             </div>
-                            <div className="mx-auto text-base-content mt-10 lg:w-7/12 text-center text-base lg:mb-5">
+                            <div className="mx-auto w-4/5 text-base-content mt-10 lg:w-7/12 text-center text-base lg:mb-5">
                                 The best bookmark managing tool ever made. Now you can access your bookmark on any device, any browser, anywhere
                             </div>
-                            <div className="flex w-1/2 flex-col my-5 justify-center text-center mx-auto">
-                                <button onClick={() => router.push('/payment')} className="btn bg-green-300 w-52 mx-auto text-black">Get</button>
+                            <div className="flex lg:w-1/2 flex-col my-5 justify-center text-center mx-auto">
+                                <button onClick={() => router.push('/payment')} className="btn bg-green-500 w-52 mx-auto text-black">Get</button>
                                 <div className='justify-center text-base-content mx-auto mt-3'>
                                     <li className="flex items-center gap-3">
                                         <svg
@@ -70,7 +70,7 @@ const Hero = () => {
                                         Trusted by people
                                     </li>
                                 </div>
-                                <div className='lg:flex justify-center'>
+                                <div className='lg:flex text-center mx-auto justify-center'>
                                     <div>
                                         <Avatar />
                                     </div>

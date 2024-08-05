@@ -34,7 +34,7 @@ const DeleteMark = () => {
                     <div className="text-base text-center my-5">Do you really want to delete?</div>
                     <div className="justify-center m-auto items-center flex gap-3">
                         <div className="justify-center items-center my-auto">
-                        <button onClick={() => onSubmit(param)} disabled={isSubmitting} className="btn  text-red-600 bg-base-300"> {isSubmitting ? (
+                        <button onClick={() => onSubmit(param)} disabled={isSubmitting} className="btn text-red-600 bg-base-300"> {isSubmitting ? (
                             <>
                                 <span className="m-auto loading loading-spinner loading-md"></span>
                             </>

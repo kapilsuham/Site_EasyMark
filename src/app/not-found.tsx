@@ -14,7 +14,7 @@ const NotFound=()=> {
           Sorry, the page you are looking for doesn&apos;t exist or has been moved.
         </p>
         <div className="mt-6 flex items-center space-x-3">
-        <button onClick={()=>router.back()} className="btn btn-outline bg-green-400">Go back</button>
+        <button onClick={()=>router.back()} className="btn btn-outline bg-green-500">Go back</button>
           <button onClick={()=>router.replace('/')} className="btn btn-active"> Home Page</button>
         </div>
       </div>

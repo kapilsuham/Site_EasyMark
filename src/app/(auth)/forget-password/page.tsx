@@ -7,6 +7,8 @@ import axios from 'axios'
 import { ApiResponse } from "@/(more)/types/ApiResponse"
 import { toast } from "sonner"
 import Loader from "@/components/Loader"
+import Image from "next/image"
+import { SITE_NAME } from "@/app/ConfigApp"
 const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
@@ -38,6 +40,10 @@ const Page = () => {
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
+          <div className="flex text-xl font-bold items-center m-auto text-base-content cursor-pointer gap-2">
+              <Image src='https://lemonsqueezy.imgix.net/design/112348/e14b4f14-f29c-4d19-83de-104808f7eda6.png?fit=clip&h=100&ixlib=php-3.3.1&w=100&s=3724ef4df78ce51df6f700522edee435' height={50} width={50} alt="logo" />
+              <span>{SITE_NAME}</span>
+            </div>
             <div role="tablist" className="tabs tabs-bordered">
               <input type="radio" name="my_tabs_1" role="tab" className="tab px-10" aria-label="Username" defaultChecked  readOnly />
               <div role="tabpanel" className="tab-content py-10">
@@ -60,7 +66,7 @@ const Page = () => {
 
 
             <div className="form-control mt-6">
-              <button type="submit" disabled={isSubmitting}  className="btn bg-green-400"> {isSubmitting ? (
+              <button type="submit" disabled={isSubmitting}  className="btn bg-green-500"> {isSubmitting ? (
                 <>
                   <Loader/>
                 </>

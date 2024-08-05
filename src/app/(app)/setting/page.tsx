@@ -64,7 +64,7 @@ const Page = () => {
         </div>
         <div className='lg:w-1/3 w-full my-10 items-center'>
           <div className='flex flex-col gap-8'>
-          <div className='flex items-center justify-between mr-3 '>
+          <div className='flex items-center justify-between mr-4 '>
               <div>Permanently delete account:</div>
               <div>
               <div className='text-xl font-bold'>{userAccess?.data.LifeTimeHasAccessGold?(<div className='text-yellow-500'>Gold</div>):(<div className='text-gray-500'>Basic</div>)}</div>
@@ -130,9 +130,9 @@ const Page = () => {
         </div>
         <div className='divider'></div>
             <div className='max-w-80 my-3 overflow-hidden flex items-center gap-5'>
-              <div>Contact:</div>
-              easymark.kapil@gmail.com
-              </div>
+            <div>Support:</div>
+            <a className='text-primary underline' target='_blank' href="https://mail.google.com/mail/u/0/?fs=1&to=easymark.kapil@gmail.com&tf=cm"> easymark.kapil@gmail.com</a>
+          </div>
         <div className='text-base-content flex gap-3 items-center'>
         <div className="avatar">
                     <div className="w-12  rounded-full">
@@ -140,7 +140,7 @@ const Page = () => {
                     </div>
                 </div>
                         <div className='text-sm'>
-                        Hey👋 I'm Kapil, the creator of EasyMark. You can follow my work on <a className='underline' href="https://x.com/kapil__paliwal?t=0GbROshSxHMoRlUvHqyxgQ&s=08">Twitter</a>.
+                        Hey👋 I'm Kapil, the creator of EasyMark. You can follow my work on <a className='underline' target='_blank' href="https://x.com/kapil__paliwal?t=0GbROshSxHMoRlUvHqyxgQ&s=08">Twitter</a>.
                         </div>
         </div>
       </div>

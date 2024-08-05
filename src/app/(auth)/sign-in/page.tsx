@@ -9,6 +9,8 @@ import { signInSchema } from "@/(more)/schema/signInSchema"
 import { signIn } from "next-auth/react"
 import { toast } from "sonner"
 import Loader from "@/components/Loader"
+import { SITE_NAME } from "@/app/ConfigApp"
+import Image from "next/image"
 const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const router = useRouter()
@@ -65,6 +67,10 @@ const Page = () => {
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
+          <div className="flex text-xl font-bold items-center m-auto text-base-content cursor-pointer gap-2">
+              <Image src='https://lemonsqueezy.imgix.net/design/112348/e14b4f14-f29c-4d19-83de-104808f7eda6.png?fit=clip&h=100&ixlib=php-3.3.1&w=100&s=3724ef4df78ce51df6f700522edee435' height={50} width={50} alt="logo" />
+              <span>{SITE_NAME}</span>
+            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Username</span>
@@ -83,7 +89,7 @@ const Page = () => {
               </label>
             </div>
             <div className="form-control">
-              <button type="submit" disabled={isSubmitting} className="btn bg-green-400"> {isSubmitting ? (
+              <button type="submit" disabled={isSubmitting} className="btn bg-green-500"> {isSubmitting ? (
                 <>
                   <Loader/>
                 </>
@@ -91,7 +97,7 @@ const Page = () => {
             </div>
             <div className="divider text-base-content">OR</div>
             <div className="form-control">
-              <button disabled={isSubmitting} onClick={GoogleOauth} className="btn bg-green-400"> {isSubmitting ? (
+              <button disabled={isSubmitting} onClick={GoogleOauth} className="btn bg-green-500"> {isSubmitting ? (
                 <>
                   <Loader/>
                 </>

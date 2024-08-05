@@ -21,7 +21,7 @@ const Pricing = () => {
                     <div key={i?.id} className="card min-w-96 bg-base-100 mb-5 shadow-xl">
                         {i.popular ? (<div className='m-auto w-1/3 font-extrabold border-green-400 border-4 rounded-lg text-center'>Popular</div>) : (<div className='mt-8'></div>)}
                         <div className="card-body">
-                            <span className="mb-2 block pt-6 text-4xl font-extrabold text-yellow-400">{i?.name}</span>
+                            <span className="mb-2 block pt-6 text-4xl font-extrabold text-green-400">{i?.name}</span>
                             <span className="flex items-end text-base-content">
                                 <span className="text-4xl text-base-content font-extrabold leading-none">{i.cuttedPrice ? (<span className='text-2xl line-through'>{"$" + i.cuttedPrice}</span>) : (null)} ${i.price ? (i.price) : (null)}<span className='text-base'> USD </span>
                                 </span>
