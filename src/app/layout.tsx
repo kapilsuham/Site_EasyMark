@@ -4,19 +4,20 @@ import "./globals.css";
 import { Toaster } from 'sonner';
 import AuthProvider from "@/(more)/context/AuthProvider";
 import PlausibleProvider from "next-plausible";
+import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL as string),
   title: {
-    default: "Manage you bookmarks | EasyMark",
+    default: "Best bookmark managing tool | EasyMark",
     template: "%s | EasyMark"
   },
-  description: "Manage you bookmarks",
+  description: "Best bookmark managing tool",
   twitter: {
     card: "summary_large_image",
     site: 'easymark.co',
-    title: 'Manage you bookmarks',
-    description: 'EasyMark | Manage you bookmarks',
+    title: 'Best bookmark managing tool',
+    description: 'EasyMark | Best bookmark managing tool',
   }
 
 };

@@ -76,8 +76,8 @@ export default function Page() {
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={form.handleSubmit(onSubmit)} className="card-body">
           <div className="flex text-xl font-bold items-center m-auto cursor-pointer gap-2">
-              <Image src='https://lemonsqueezy.imgix.net/design/112348/e14b4f14-f29c-4d19-83de-104808f7eda6.png?fit=clip&h=100&ixlib=php-3.3.1&w=100&s=3724ef4df78ce51df6f700522edee435' height={50} width={50} alt="logo" />
-              <span className="text-black">{SITE_NAME}</span>
+              <Image src='https://lemonsqueezy.imgix.net/design/112348/39893123-0e23-43f1-a2f1-2b54169a0d71.png?fit=clip&h=100&ixlib=php-3.3.1&w=100&s=c63c661e3259135daa6f11046e676ffd' height={50} width={50} alt="logo" />
+              <span className="text-base-content">{SITE_NAME}</span>
             </div>
             <div className="form-control">
               <label className="label">
@@ -104,7 +104,7 @@ export default function Page() {
               <input type="password" placeholder="password" className="input input-bordered text-base-content" {...form.register("password")} required />
             </div>
             <div className="form-control mt-6">
-              <button type="submit" disabled={isSubmitting} className="btn bg-green-500"> {isSubmitting ? (
+              <button type="submit" disabled={isSubmitting} className="btn bg-primary hover:bg-primary hover:opacity-90 text-primary-content"> {isSubmitting ? (
                 <>
                   <Loader />
                 </>

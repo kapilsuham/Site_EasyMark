@@ -14,7 +14,7 @@ const Page = () => {
   return (
     <div className='pt-2 bg-secondary-content text-base-content'>
       <div>
-        <div className='text-green-400 text-2xl lg:text-4xl font-extrabold text-center'>Pricing</div>
+        <div className='text-primary text-2xl lg:text-4xl font-extrabold text-center'>Pricing</div>
         <div className="mx-auto mb-2 max-w-2xl text-center lg:max-w-5xl">
           <h1 className="text-3xl font-bold tracking-tight text-base-content sm:text-6xl lg:text-6xl">
             Improve your productivity, with EasyMark

@@ -19,7 +19,7 @@ const Hero = () => {
                                 The best bookmark managing tool ever made. Now you can access your bookmark on any device, any browser, anywhere
                             </div>
                             <div className="flex lg:w-1/2 flex-col my-5 justify-center text-center mx-auto">
-                                <button onClick={() => router.push('/payment')} className="btn bg-green-500 w-52 mx-auto text-black">Get</button>
+                                <button onClick={() => router.push('/payment')} className="btn bg-primary hover:bg-primary hover:opacity-90  w-52 mx-auto text-primary-content">Get</button>
                                 <div className='justify-center text-base-content mx-auto mt-3'>
                                     <li className="flex items-center gap-3">
                                         <svg

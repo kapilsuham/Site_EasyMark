@@ -30,7 +30,7 @@ const Page = () => {
       <Sidebar />
       <div className='bg-base-200 lg:absolute lg:w-5/6 right-0 p-5 text-base-content min-h-screen'>
         <div className='flex flex-col gap-8 m-10'>
-          <div className='text-3xl font-bold text-green-400 underline'>Well it's simple</div>
+          <div className='text-3xl font-bold text-primary underline'>Well it's simple</div>
           <div className='text-base-content flex flex-col gap-3'>
             <li className="flex items-center gap-3">
               <svg

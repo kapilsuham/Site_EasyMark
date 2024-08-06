@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="navbar z-50 sticky top-0 h-20 bg-base-200">
       <div className="flex-1 ml-9">
         <div onClick={() => router.push('/')} className="btn btn-ghost w-auto h-auto text-base-content lg:text-xl">
-          <Image quality={10} width={52} height={52} src="https://lemonsqueezy.imgix.net/design/112348/e14b4f14-f29c-4d19-83de-104808f7eda6.png?fit=clip&h=100&ixlib=php-3.3.1&w=100&s=3724ef4df78ce51df6f700522edee435" alt="img" />{SITE_NAME}</div>
+          <Image quality={10} width={52} height={52} src="https://lemonsqueezy.imgix.net/design/112348/39893123-0e23-43f1-a2f1-2b54169a0d71.png?fit=clip&h=100&ixlib=php-3.3.1&w=100&s=c63c661e3259135daa6f11046e676ffd" alt="img" />{SITE_NAME}</div>
       </div>
       <div >
         <div className='hidden lg:flex'> <ThemeController /></div>
@@ -36,7 +36,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>) : (
-            <div><button className="btn btn-active bg-green-500 hover:bg-green-400 text-black lg:mr-10" onClick={() => router.push("/sign-in")}>LogIn</button></div>)}</div>
+            <div><button className="btn bg-primary hover:bg-primary hover:opacity-90 text-primary-content lg:mr-10" onClick={() => router.push("/sign-in")}>LogIn</button></div>)}</div>
       </div>
       <div>
       </div>

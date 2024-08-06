@@ -3,7 +3,7 @@ import Image from 'next/image'
 const TestimonialSingle = () => {
   return (
     <div>
-      <div className="text-base-content lg:hero p-4 my-10 m-auto bg-base-200">
+      <div className="text-base-content lg:hero p-4 mb-5 m-auto bg-base-200">
         <div className="hero-content lg:w-4/5 flex-col lg:flex-row">
           <Image width={196} height={196} alt="image" src="/me.png" className="max-w-sm rounded-lg shadow-2xl" />
           <div >

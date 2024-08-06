@@ -1,7 +1,7 @@
 import Image from 'next/image'
 const Me = () => {
     return (
-        <div className='container m-auto mt-32 w-4/5 lg:w-1/2 text-base-content'>
+        <div className='container m-auto mt-20 w-4/5 lg:w-1/2 text-base-content'>
             <div className='container justify-center lg:flex lg:gap-5'>
                 <div className='text-center m-auto'><Image className='max-w-sm rounded-lg mx-auto shadow-2xl' width={160} height={160} src="/me.png" alt="img" />
                 </div>

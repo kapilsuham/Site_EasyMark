@@ -128,7 +128,7 @@ const features = [
         <ul className="space-y-2">
           {[
             "Multiple Device login",
-            "Access anywhere",
+            "Access on Mobile",
             "Save bookmark on any browser",
           ].map((item) => (
             <li key={item} className="flex items-center gap-3">

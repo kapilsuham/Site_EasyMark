@@ -53,7 +53,7 @@ const Item = ({ item }:any) => {
         aria-expanded={isOpen}
       >
         <span
-          className={`flex-1 text-base-content ${isOpen ? "text-green-400" : ""}`}
+          className={`flex-1 text-base-content ${isOpen ? "text-primary" : ""}`}
         >
           {item?.question}
         </span>

@@ -15,7 +15,7 @@ export default function Error() {
           Sorry, the for inconvenience. Try again.
         </p>
         <div className="mt-6 flex items-center space-x-3">
-        <button onClick={()=>router.back()} className="btn btn-outline bg-green-500">Go back</button>
+        <button onClick={()=>router.back()} className="btn btn-outline bg-primary">Go back</button>
           <button onClick={()=>router.replace('/')} className="btn btn-active"> Home Page</button>
         </div>
       </div>
