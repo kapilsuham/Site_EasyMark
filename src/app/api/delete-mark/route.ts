@@ -14,7 +14,7 @@ export async function POST(request: Request) {
         const user = await UserModel.findOne({ email: session?.user.email })
         if (user) {
             const markFind = user.mark.find((i) => i.title === param.mark)
-            console.log(markFind);
+            // console.log(markFind);
             
             if (!markFind) {
                 return Response.json(
