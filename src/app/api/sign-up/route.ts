@@ -64,16 +64,18 @@ export async function POST(request: Request) {
 
                 const hashedPassword = await bcrypt.hash(password, 10)
                 existingUserByEmail.password = hashedPassword
+                existingUserByEmail.username = username
                 existingUserByEmail.verifyCode = verifyCode
                 existingUserByEmail.verifyCodeExpiry = new Date(Date.now() + 3600000)
                 await existingUserByEmail.save()
-
+                return Response.json(
+                    {
+                        success: false,
+                        message: "OTP send on email"
+                    },
+                    { status: 200 }
+                )
             }
-            return Response.json({
-                success: true,
-                message: "email is already taken"
-
-            }, { status: 500 })
         }
         else {
             const hashedPassword = await bcrypt.hash(password, 10)

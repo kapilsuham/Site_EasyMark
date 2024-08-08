@@ -3,7 +3,6 @@ export const SITE_NAME = "EasyMark" //string
 export const AppDescription = "Best bookmark managing tool"
 // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
 export const DomainName = "localhost:3000"
-
 export const MY_CRISP_WEBSITE_ID = ""  //string
 
 export const products = [

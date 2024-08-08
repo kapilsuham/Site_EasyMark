@@ -39,20 +39,56 @@ export async function POST(req: Request) {
       if (isSuccessful) {
         if (body.meta.custom_data.subscriptionType === 'LifeTimeHasAccessGold') {
           await dbConnect()
-          const user = await UserModel.findOne({ email, isVerified: true })
+          const user = await UserModel.findOne({ email})
           if (user) {
             user.LifeTimeHasAccessGold = true
             await user.save()
             console.log('===============order_paid');
           }
+          else{
+            const random = Math.floor((Math.random()*1000)*2811)
+            const username = 'empty' + random.toString()
+            const password = 'empty'+ random.toString()
+            const verifyCode = 'empty'+ random.toString()
+            const expiryDate = new Date()
+            expiryDate.setHours(expiryDate.getHours() + 1)
+            const newUser = new UserModel({
+              username,
+              email,
+              password,
+              LifeTimeHasAccessGold:true,
+              verifyCode,
+              verifyCodeExpiry:expiryDate,
+              isVerified: false,
+          })
+          await newUser.save()
+          }
         }
         if (body.meta.custom_data.subscriptionType === 'LifeTimeHasAccessBasic') {
           await dbConnect()
-          const user = await UserModel.findOne({ email, isVerified: true })
+          const user = await UserModel.findOne({ email})
           if (user) {
             user.LifeTimeHasAccessBasic = true
             await user.save()
             console.log('===============order_paid');
+          }
+          else{
+            const random = Math.floor((Math.random()*1000)*2811)
+            const username = 'empty' + random.toString()
+            const password = 'empty'+ random.toString()
+            const verifyCode = 'empty'+ random.toString()
+            const expiryDate = new Date()
+            expiryDate.setHours(expiryDate.getHours() + 1)
+            const newUser = new UserModel({
+              username,
+              email,
+              password,
+              LifeTimeHasAccessBasic:true,
+              verifyCode,
+              verifyCodeExpiry:expiryDate,
+              isVerified: false,
+          })
+          await newUser.save()
           }
         }
       }
@@ -63,7 +99,7 @@ export async function POST(req: Request) {
       // console.log(body.data);
       if (isExpired) {
         await dbConnect()
-        const user = await UserModel.findOne({ email, isVerified: true })
+        const user = await UserModel.findOne({ email})
         if (user) {
           user.LifeTimeHasAccessGold = false
           user.LifeTimeHasAccessBasic = false
@@ -77,7 +113,7 @@ export async function POST(req: Request) {
       const isCancelled = body.data.attributes.status === "cancelled";
       if (isCancelled) {
         await dbConnect()
-        const user = await UserModel.findOne({ email, isVerified: true })
+        const user = await UserModel.findOne({ email})
         if (user) {
           user.LifeTimeHasAccessGold = false
           user.LifeTimeHasAccessBasic = false

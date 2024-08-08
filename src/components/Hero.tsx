@@ -1,9 +1,7 @@
 'use client'
-import { useRouter } from 'next/navigation'
+
 import Avatar from './Avatar'
-import Image from 'next/image'
 const Hero = () => {
-    const router = useRouter()
     return (
         <div>
             <div className="hero my-10 bg-base-200">
@@ -19,7 +17,7 @@ const Hero = () => {
                                 The best bookmark managing tool ever made. Now you can access your bookmark on any device, any browser, anywhere
                             </div>
                             <div className="flex lg:w-1/2 flex-col my-5 justify-center text-center mx-auto">
-                                <button onClick={() => router.push('/payment')} className="btn bg-primary hover:bg-primary hover:opacity-90  w-52 mx-auto text-primary-content">Get</button>
+                                <a href='/#pricing' className="btn bg-primary hover:bg-primary hover:opacity-90  w-52 mx-auto text-primary-content">Get</a>
                                 <div className='justify-center text-base-content mx-auto mt-3'>
                                     <li className="flex items-center gap-3">
                                         <svg

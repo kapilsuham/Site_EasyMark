@@ -3,9 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from 'sonner';
 import AuthProvider from "@/(more)/context/AuthProvider";
-import PlausibleProvider from "next-plausible";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -23,6 +23,12 @@ export const metadata: Metadata = {
   }
 
 };
+export const viewport = {
+  // Will use the primary color of your theme to show a nice theme color in the URL bar of supported browsers
+  themeColor: 'primary',
+  width: "device-width",
+  initialScale: 1,
+};
 
 export default function RootLayout({
   children,
@@ -32,17 +38,22 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        {/* <head>
-        <PlausibleProvider domain='shipforever.com' trackLocalhost={true} enabled={true}/>
-        </head> */}
         <AuthProvider >
           <body className={inter.className}>
+            <NextTopLoader color="purple"
+              initialPosition={0.08}
+              crawlSpeed={200}
+              height={3}
+              showSpinner={false}
+              easing="ease"
+              speed={200}
+            />
             {children}
             <Toaster />
+            <Analytics />
+            <SpeedInsights />
           </body>
         </AuthProvider>
-        <Analytics/>
-        <SpeedInsights/>
       </html>
     </>
   );

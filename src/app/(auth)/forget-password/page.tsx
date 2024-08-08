@@ -19,7 +19,7 @@ const Page = () => {
     try {
 
       const response = await axios.post<ApiResponse>('/api/forget-password-code', data)
-      toast('success')
+      toast('Code Send')
       // console.log(response?.data?.data?.email);
 
       router.replace(`/forget-password-code-verify/${response?.data?.data?.username}?email=${response?.data?.data?.email}`) 

@@ -36,7 +36,8 @@ export async function POST(request: Request) {
             }
             return Response.json(
                 {
-                    data: user
+                    data: user,
+                    message:'Code Send'
                 },
                 { status: 201 })
         }

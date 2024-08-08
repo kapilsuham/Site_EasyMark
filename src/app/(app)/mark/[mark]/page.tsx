@@ -4,6 +4,7 @@ import DeleteMark from "@/components/DeleteMark";
 import apiClient from "@/lib/api";
 import axios from "axios";
 import Image from "next/image";
+import Link from "next/link";
 import { redirect, useParams, useRouter } from "next/navigation";
 import { toast } from "sonner";
 import useSWR from "swr";
@@ -60,7 +61,7 @@ const Mark = () => {
                                     <span className="items-center w-32 lg:w-72 overflow-hidden">{param?.mark}</span>
                                 </div>
                                 <div className="flex gap-3">
-                                    {userAccess?.data.LifeTimeHasAccessGold || sorted?.length < 5 ?<div className="btn btn-active w-20" onClick={() => router.push(`/mark/${param?.mark}/add-site`)}>Add</div>:(
+                                    {userAccess?.data.LifeTimeHasAccessGold || sorted?.length < 5 ?<Link className="btn btn-active w-20" href={`/mark/${param?.mark}/add-site`}>Add</Link>:(
                                     <div onClick={() => toast('Plan limit reached')} className="btn btn-active w-20">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#000000"} fill={"none"}>
                                     <path d="M12 16.5V14.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />

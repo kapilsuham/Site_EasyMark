@@ -22,7 +22,7 @@ const Page = () => {
       </div>
     )
   }
-  if (!userAccess?.data.LifeTimeHasAccessGold && !userAccess?.data.LifeTimeHasAccessBasic) {
+  if (!userAccess?.data?.LifeTimeHasAccessGold && !userAccess?.data?.LifeTimeHasAccessBasic) {
     redirect('/pending-payment')
   }
   return (

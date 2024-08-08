@@ -97,7 +97,7 @@ const Page = () => {
                 </>
               ) : ("Submit")}</button>
             </div>
-            <button className="btn bg-primary " disabled={isSubmitting} onClick={() => resendEmail()}>
+            <button className="btn bg-primary hover:bg-primary hover:opacity-90 text-primary-content" disabled={isSubmitting} onClick={() => resendEmail()}>
               Resend Code</button>
           </form>
         </div>

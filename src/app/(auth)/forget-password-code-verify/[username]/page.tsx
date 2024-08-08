@@ -37,7 +37,7 @@ const VerifyAccount= ()=> {
 
       router.replace(`/sign-in`)
 
-      toast('success')
+      toast('Password Updated')
     } catch (error) {
       console.log("error in changing password",error);
       toast("Invalid Code")
@@ -99,7 +99,7 @@ const VerifyAccount= ()=> {
           </>
         ):("Submit")}</button>
         </div>
-          <button className="btn bg-primary " disabled={isSubmitting} onClick={()=>resendEmail()}>
+          <button className="btn bg-primary hover:bg-primary hover:opacity-90 text-primary-content" disabled={isSubmitting} onClick={()=>resendEmail()}>
       Resend Code</button>
       </form>
     </div>
