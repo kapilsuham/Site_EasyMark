@@ -56,7 +56,7 @@ const VerifyAccount= ()=> {
     const url =new URLSearchParams(location.search)
     const email=url.get('email')    
     try {
-      const response=await axios.post(`/api/forgetpassword-resend-code`,
+      const response=await axios.post(`/api/forget-password-resend-code`,
       {username:params.username,email})
       
       await sleep(8000)     

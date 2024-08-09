@@ -12,7 +12,7 @@ import useSWR from "swr";
 const Mark = () => {
     const param = useParams()
     const { data:userAccess, isLoading } = useSWR("/webhook", (url) => apiClient.get(url),{
-        revalidateOnFocus:false
+        revalidateOnFocus:false,
     })
     if (!isLoading) {
         if (!userAccess?.data.LifeTimeHasAccessGold && !userAccess?.data.LifeTimeHasAccessBasic) {

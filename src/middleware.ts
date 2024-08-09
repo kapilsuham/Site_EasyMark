@@ -5,7 +5,7 @@ import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/sign-in', '/sign-up', '/', '/verify/:path*',"/api/get-mark"],
+  matcher: ['/dashboard/:path*', '/sign-in', '/sign-up', '/', '/verify/:path*',"/api/get-mark","/api/add-mark","/api/get-site","/api/resend-code","/api/edit-mark","/api/edit-site","/api/forget-password-resend-code"],
 };
 
 const redis = new Redis({
@@ -15,7 +15,7 @@ const redis = new Redis({
 
 const ratelimit = new Ratelimit({
   redis: redis,
-  limiter: Ratelimit.slidingWindow(5, "60 s"),
+  limiter: Ratelimit.slidingWindow(20, "60 s"),
 });
 
 export async function middleware(request: NextRequest) {
